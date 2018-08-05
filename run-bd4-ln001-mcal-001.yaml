@@ -1,0 +1,9 @@
+sim: dbsim-bd4-ln001
+fit: mcal-001
+
+# more than 3 per
+ntrials: 100000
+#sec_per: 4.0
+sec_per: 3.5
+desired_hours: 0.45
+jobs_per_condor_sub: 1000
