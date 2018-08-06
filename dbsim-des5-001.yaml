@@ -1,0 +1,88 @@
+
+# scale of entire group in arcseconds.  Currently this
+# is a gaussian sigma
+
+positions:
+    type: 'uniform'
+    # offsets will go half of this
+    width: 30.0 # half an arcminute
+    #width: 120.0 # in arcsec. This is 2 arcminutes
+
+# 2.2x2.2 arcminute
+#dims: [500,500]
+
+# this is the total number to simulate N/square arcminutes
+# this is density of 30/square arcminutes
+#nobj:
+#    type: 'poisson'
+#    mean: 145
+
+# 0.6x0.6 arcmin, slightly larger than max offset
+dims: [135, 135]
+
+# this is the total number to simulate N/square arcminutes
+# this is density of 30/square arcminutes for a 0.5x0.5 box
+nobj:
+    type: 'poisson'
+    mean: 7.5
+
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+# noise for the image, same for all bands
+noise_sigma: 0.04
+#noise_sigma: 0.001
+#noise_sigma: 0.01
+
+# nois in psf image, should be very small
+psf_noise_sigma: 0.0001
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 3
+
+pdfs:
+    g:
+        sigma: 0.2
+
+    # hlr of the disk
+    hlr_flux:
+        type: cosmos
+
+    disk:
+        color: [1.25, 1.0, 0.75]
+
+    bulge:
+        color: [0.5, 1.0, 1.5]
+
+        # g_bulge=g_fac*g_disk
+        g_fac:
+            type: uniform
+            range: [0.5, 1.0]
+
+        fracdev:
+            type: uniform
+            range: [0.0, 1.0]
+
+        # bulge_hlr=hlr_fac*disk_hlr
+        hlr_fac: 
+            type: uniform
+            range: [0.9, 1.1]
+
+        # shift in units of the disk hlr
+        bulge_shift: 0.05
+
+    knots:
+        color: [1.5, 1.0, 0.5]
+
+        num:
+            type: uniform
+            range: [1, 50]
+
+
+        # flux per knot as a fraction of the disk flux
+        # so the max of 50 knots would have a total of 1/5 the disk flux
+        flux_frac_per_knot: 0.004
+
+shear: [0.02, 0.00]

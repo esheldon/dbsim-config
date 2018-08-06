@@ -1,5 +1,7 @@
 fitter: 'mof'
 
+weight_type: 'weight'
+
 mof:
 
     detband: 2

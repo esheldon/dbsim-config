@@ -1,0 +1,12 @@
+sim: dbsim-bd4-ln001
+
+# uberseg
+fit: mcal-002
+
+# more than 3 per
+ntrials: 300000
+#sec_per: 4.0
+# got about 3 sec per actually
+sec_per: 3.5
+desired_hours: 0.25
+jobs_per_condor_sub: 1000

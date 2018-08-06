@@ -1,0 +1,11 @@
+sim: dbsim-des5-ln001
+
+# uberseg
+fit: mcal-003
+
+# about 5.5 per
+ntrials: 2000000
+
+sec_per: 7.5
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

@@ -1,0 +1,31 @@
+- seeing big bias for 4 objects. maybe not too surprising, the density
+  is quite high, 51/sq arcmin.  But note the density is really higher
+  because they are distributed as a gaussian around the center.
+  
+  In any case, I want to explore it a little
+
+    - uberseg
+        - can only do it for both now....
+        - mcal-002
+        - R considerably less wide *in the tails*
+        - running some more to better test shear
+        - huh... got higher bias this time
+
+    - simpler model for MOF
+
+    - priors
+        - tighter prior on cen
+        - looser prior on cen
+        - better prior on size and flux
+        - tighter prior on fracdev
+
+    - metacal the whole scene some how
+        - currently not set up to do this
+        - already know the cheating metacal works
+
+- doing more realistic scenes for DES
+    - larger images
+    - objects placed randomly, uniformly
+        - maybe putting down some clusters too
+    - try to get the density of detections about right, or the effective
+      number density
