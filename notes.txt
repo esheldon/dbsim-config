@@ -29,3 +29,68 @@
         - maybe putting down some clusters too
     - try to get the density of detections about right, or the effective
       number density
+    - des5-ln001-mcal-003
+    - seeing additive -1.5e-4 (probably the m seen is also that)
+        - what the heck would cause that?  Centering problems?
+        - how could it have a preferred direction?  maybe
+        the medsifier is doing it some how, off-center stamps?
+
+    - also going to do some selections on size and s/n.  If depends on size
+      that might tell something
+
+      - no cuts
+        R: [0.83755737 0.83730776]
+		total wsum: 11604056.0
+		shear_meas:     [ 0.01984893 -0.00015563]
+		shear_meas_err: [5.01195620e-05 5.01877496e-05]
+		errors are 3 sigma
+		m: -7.55348758e-03 +/- 7.51793430e-03  c: -1.55628017e-04 +/- 1.50563249e-04 
+
+		3 sigma bias and additive
+
+      - just size cut at T/Tpsf > 0.5 (also s/n > 10 but that cuts nothing)
+		R: [0.85336745 0.85323621]
+		Rsel: [0.08519229 0.08473903]
+		shear_meas:     [ 0.01950958 -0.00016299]
+		shear_meas_err: [0.00010322 0.00010354]
+		without correction
+		errors are 1 sigma
+		m: 7.28615386e-02 +/- 5.67599653e-03  c: -1.79180065e-04 +/- 1.13819536e-04
+
+		with correction
+		errors are 1 sigma
+		m: -2.45212149e-02 +/- 5.16079102e-03  c: -1.62992490e-04 +/- 1.03536795e-04
+
+				
+      - T/Tpsf > 0.5 S/N > 500
+		keeps 25%
+		R: [0.8540184  0.85403539]
+		Rsel: [0.08346282 0.08287814]
+		total wsum: 2856251.0
+		shear_meas:     [ 0.01951948 -0.00017446]
+		shear_meas_err: [0.00010426 0.00010457]
+		without correction
+		errors are 3 sigma
+		m: 7.13554674e-02 +/- 1.71681712e-02  c: -1.91393039e-04 +/- 3.44168469e-04
+
+		with correction
+		errors are 3 sigma
+		m: -2.40260164e-02 +/- 1.56397097e-02  c: -1.74462663e-04 +/- 3.13723779e-04
+
+      - T/Tpsf > 0.5 S/N > 1000
+		keeps 20%
+
+        R: [0.85635538 0.85650581]
+        Rsel: [0.07334992 0.07314312]
+        total wsum: 2326704.0
+        shear_meas:     [ 0.01939915 -0.00028374]
+        shear_meas_err: [0.00011773 0.00011807]
+
+        without correction
+        errors are 3 sigma
+        m: 5.30378439e-02 +/- 1.91724257e-02  c: -3.07966938e-04 +/- 3.84467451e-04
+
+        with correction
+        errors are 3 sigma
+        m: -3.00425019e-02 +/- 1.76598004e-02  c: -2.83736648e-04 +/- 3.54218238e-04
+
