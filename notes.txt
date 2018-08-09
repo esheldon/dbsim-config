@@ -107,3 +107,10 @@ large bias
 - maybe box sizes are too small at 16; maybe put limit at 32
     - found a bug with box size actually, not clipping to
     min box size!
+    - still some bias
+
+- ideas
+    - make more like nbrsim: in particular the noise but
+    take the 250 flux factor
+    - try running with just uberseg no mof subtraction
+    - bug when I made it work for non-square stamps?
