@@ -1,0 +1,12 @@
+sim: dbsim-bd8-001
+
+# uberseg
+fit: mcal-003
+
+# get about 8
+#ntrials: 1250000
+ntrials: 400000
+
+sec_per: 10.0
+desired_hours: 0.50
+jobs_per_condor_sub: 1000
