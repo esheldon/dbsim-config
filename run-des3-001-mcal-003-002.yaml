@@ -1,0 +1,12 @@
+sim: dbsim-des3-001
+
+# uberseg
+fit: mcal-003
+
+# get about 8 per after cuts
+ntrials: 1250000
+#ntrials: 312500
+
+sec_per: 27.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
