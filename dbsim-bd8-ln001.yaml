@@ -68,7 +68,7 @@ pdfs:
 
     # hlr of the disk
     hlr: 0.5
-    flux: 10000.0
+    flux: 40000.0
 
     disk:
         color: [1.25, 1.0, 0.75]

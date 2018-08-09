@@ -111,6 +111,15 @@ large bias
 
 - ideas
     - make more like nbrsim: in particular the noise but
-    take the 250 flux factor
+    keep the 250 flux factor
+        - dbsim-des3-002
+        - run-des3-002-mcal-003
+        - still biased
+
     - try running with just uberseg no mof subtraction
     - bug when I made it work for non-square stamps?
+
+    - book keeping error sending to metacal?
+    - use of uberseg (don't think uberseg was used
+    after first fit in original MOF)
+    - PSF OK? should be since one object was unbiased
