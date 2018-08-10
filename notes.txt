@@ -161,5 +161,15 @@ large bias
           That's 57 on a side. Would still want padding
           of 0.2 arcmin so 102
 
+          smaller so groups aren't too big
+          link all "la"
+          - run-des3-small01-mcal-la01-01
+              
+
     - out of desperation trying lower shape noise since
     that is a diff. with the bd08-001 sim that looked ok
+        - even worse?
+
+    - maybe using photon shooting is the problem.  The noise
+    in the background is incorrect then.  maybe do a run
+    with exp only so it is fast?
