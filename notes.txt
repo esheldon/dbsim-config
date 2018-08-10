@@ -176,3 +176,8 @@ large bias
     with exp only so it is fast?  looked at nbrsim, and
     it used photon shooting for this range of fluxes and
     noise
+
+        - ugh, forgot I already tested s/n=15 in dbsim-bd08-001
+        maybe something odd with selections
+
+still haven't tried turning off uberseg
