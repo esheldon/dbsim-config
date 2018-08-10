@@ -164,6 +164,7 @@ large bias
           smaller so groups aren't too big
           link all "la"
           - run-des3-small01-mcal-la01-01
+              - same
               
 
     - out of desperation trying lower shape noise since
