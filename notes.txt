@@ -123,3 +123,17 @@ large bias
     - use of uberseg (don't think uberseg was used
     after first fit in original MOF)
     - PSF OK? should be since one object was unbiased
+
+
+- dbsim-bd08-ln001
+    - 8 high s/n objects in 1 square arcminute area
+    - m: -4.39092245e-04 +/- 2.80686868e-03 1 sigm
+- dbsim-bd08-001
+    - 8 mcal_s2n ~ 15 objects in 1 square arcminute area
+    - 
+
+- dbsim-des3-003
+    - using same settings for CosmosSampler as for nbrsim
+    - kept same multiplier for flux as nbrsim
+    - more noise to get density down to Y3 levels about 7.5
+    effective after s2n10Trat15 cuts
