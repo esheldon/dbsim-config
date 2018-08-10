@@ -137,3 +137,5 @@ large bias
     - kept same multiplier for flux as nbrsim
     - more noise to get density down to Y3 levels about 7.5
     effective after s2n10Trat15 cuts
+
+    - still biased low by 2-3 percent
