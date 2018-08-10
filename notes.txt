@@ -172,4 +172,6 @@ large bias
 
     - maybe using photon shooting is the problem.  The noise
     in the background is incorrect then.  maybe do a run
-    with exp only so it is fast?
+    with exp only so it is fast?  looked at nbrsim, and
+    it used photon shooting for this range of fluxes and
+    noise
