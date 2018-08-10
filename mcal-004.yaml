@@ -1,6 +1,6 @@
 # this one with uberseg in mof and metacal
 # run mof then metacal
-fitter: 'mof-metacal'
+fitter: 'metacal'
 
 # currently there is only one place to do this, can't
 # do only mof or only metacal uberseg
