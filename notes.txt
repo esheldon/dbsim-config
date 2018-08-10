@@ -122,6 +122,10 @@ large bias
     - book keeping error sending to metacal?
     - use of uberseg (don't think uberseg was used
     after first fit in original MOF)
+        - because I'm less liberal with linking I need
+        uberseg since there are objects in the stamps
+        (especially with new larger min stamp size 32)
+
     - PSF OK? should be since one object was unbiased
 
 
@@ -130,7 +134,7 @@ large bias
     - m: -4.39092245e-04 +/- 2.80686868e-03 1 sigm
 - dbsim-bd08-001
     - 8 mcal_s2n ~ 15 objects in 1 square arcminute area
-    - 
+    - looks ok
 
 - dbsim-des3-003
     - using same settings for CosmosSampler as for nbrsim
@@ -139,3 +143,23 @@ large bias
     effective after s2n10Trat15 cuts
 
     - still biased low by 2-3 percent
+
+    - run-dbsim-des3-003-mcal-nomof-001-001
+        - using just uberseg
+        - still looks biased, in fact right about the
+        same amount
+
+- maybe should use a different linking for subtraction
+    of neighbors: then stamps as linking do make sense for sure
+    - could just implement old liberal linking and see how
+    well it works, or use smaller images and link everything
+    ( definitely use fixed number then )
+
+    - or link everything explicitly
+        - seeing 23/sq arcminute detected, 8 effective
+          using 1/4 sq arcmin would give 6 detected.
+          That's 57 on a side. Would still want padding
+          of 0.2 arcmin so 102
+
+    - out of desperation trying lower shape noise since
+    that is a diff. with the bd08-001 sim that looked ok
