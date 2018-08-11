@@ -1,0 +1,109 @@
+# Y3 sx pars
+# fft draw and exp only
+#
+# tuned to be similar to nbrsim configs
+# I'm seeing lower number density than what
+# I would expect though, about 6.4/sq arcmin effective
+#
+# also turned off background subtraction, since didn't
+# do that for nbrsim
+#
+
+# scale of entire group in arcseconds.  Currently this
+# is a gaussian sigma
+
+positions:
+    type: 'uniform'
+
+    # limit with in arcminute box
+    # objects with get shifts +/- width/2
+    width: 60.0 # arcminute
+
+# 2.2x2.2 arcminute
+#dims: [500,500]
+
+# this is the total number to simulate N/square arcminutes
+# this is density of 30/square arcminutes
+#nobj:
+#    type: 'poisson'
+#    mean: 145
+
+# 0.6x0.6 arcmin, slightly larger than max offset
+#dims: [135, 135]
+
+# 1.2x1.2 arcminutes
+# the boundary should contain the max box size of 64
+dims: [275, 275]
+
+# same density as nbrsim which was 40,000 in 4096x4096
+# images
+nobj: 124
+#    type: 'poisson'
+#    mean: 124.0 # per square arcminute
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+# noise for the image, same for all bands
+# this would give 10/sq arcmin or so
+#noise_sigma: 175.0
+
+# sqrt(5/3) higher 225 gives about 7.1
+# use 216 a bit higher, 7.5 ish
+noise_sigma: 216.0
+
+measure_background: false
+
+# source extractor config
+# this is what I used for nbrsim
+sx:
+    # in sky sigma
+    #DETECT_THRESH
+    detect_thresh: 1.1
+
+    # Minimum contrast parameter for deblending
+    #DEBLEND_MINCONT
+    deblend_cont: 0.001
+
+    minarea: 4
+
+meds:
+    rad_min: 4
+    min_box_size: 32
+    max_box_size: 64
+    box_padding: 2
+
+# any galsim draw method
+draw_method: 'fft'
+
+# nois in psf image, should be very small
+psf_noise_sigma: 0.0001
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 3
+
+pdfs:
+    g:
+        sigma: 0.2
+
+    # hlr of the disk
+    hlr_flux:
+        type: cosmos
+
+        r50_range: [0.15, 1.0]
+        flux_range: [2.5, 100.0]
+
+
+        # 250 is what was used in nbrsim and gives 10/sq arcmin
+        # or about des 5 year with noise of 100 for 1 band
+        # or 175 for each of 3 bands
+        # for mimicing year 3 we add more noise
+
+        flux_mult: 250.0
+
+    disk:
+        color: [1.25, 1.0, 0.75]
+
+
+shear: [0.02, 0.00]
