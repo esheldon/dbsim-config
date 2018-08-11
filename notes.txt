@@ -177,7 +177,11 @@ large bias
     it used photon shooting for this range of fluxes and
     noise
 
+        - no better
         - ugh, forgot I already tested s/n=15 in dbsim-bd08-001
         maybe something odd with selections
+
+- fixing noise and density, still exp only
+    run-des3-006-mcal-004-001
 
 still haven't tried turning off uberseg
