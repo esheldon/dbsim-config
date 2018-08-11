@@ -36,7 +36,7 @@ positions:
 # the boundary should contain the max box size of 64
 dims: [275, 275]
 
-nobj: 19
+nobj: 39
 #    type: 'poisson'
 #    mean: 124.0 # per square arcminute
 
@@ -94,8 +94,10 @@ pdfs:
     hlr_flux:
         type: cosmos
 
-        r50_range: [0.15, 1.0]
-        flux_range: [2.5, 100.0]
+        #r50_range: [0.15, 1.0]
+        #flux_range: [2.5, 100.0]
+        r50_range: [0.05, 1.0]
+        flux_range: [0.5, 100.0]
 
 
         # 250 is what was used in nbrsim and gives 10/sq arcmin
