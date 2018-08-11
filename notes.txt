@@ -183,5 +183,7 @@ large bias
 
 - fixing noise and density, still exp only
     run-des3-006-mcal-004-001
+  same. thinking it is the extra galaxies "faint" which
+  actually were not so small or faint
 
 still haven't tried turning off uberseg
