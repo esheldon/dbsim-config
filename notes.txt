@@ -186,4 +186,8 @@ large bias
   same. thinking it is the extra galaxies "faint" which
   actually were not so small or faint
 
-still haven't tried turning off uberseg
+- turned off uberseg, just as bad if not worse
+
+- dbsim-des3-007
+    - adopted the y3 sx params
+    - run-des3-007-mcal-004
