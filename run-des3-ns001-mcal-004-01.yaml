@@ -1,0 +1,9 @@
+sim: dbsim-des3-ns001
+fit: mcal-004
+
+# get about 7.5 per after s2n > 10 Trat > 0.5 cuts
+ntrials: 1600000
+
+sec_per: 31.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

@@ -1,0 +1,9 @@
+sim: dbsim-des3one-001
+fit: mcal-004
+
+# get about 0.35 per trial
+ntrials: 50000000
+
+sec_per: 0.4
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
