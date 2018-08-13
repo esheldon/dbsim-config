@@ -191,3 +191,9 @@ large bias
 - dbsim-des3-007
     - adopted the y3 sx params
     - run-des3-007-mcal-004
+
+- dbsim-des3-008
+    - run 01 doing  bg sub
+    - run 02 also doing shears on individual objects
+        rather than whole group
+        same
