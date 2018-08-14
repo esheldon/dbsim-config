@@ -92,6 +92,9 @@ pdfs:
     hlr_flux:
         type: cosmos
 
+        # these are cuts above which the catalog looks fairly
+        # complete
+
         r50_range: [0.15, 1.0]
         flux_range: [2.5, 100.0]
 
