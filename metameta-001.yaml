@@ -1,6 +1,8 @@
 fitter: 'mof'
 
-metameta: true
+meta:
+    dometa: true
+    type: 'meta-detect'
 
 weight_type: 'uberseg'
 
