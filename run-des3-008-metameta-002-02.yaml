@@ -1,0 +1,8 @@
+sim: dbsim-des3-008
+fit: metameta-002
+
+ntrials: 3200000
+
+sec_per: 7.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
