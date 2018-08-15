@@ -1,4 +1,5 @@
 runs: [
     run-des3-008-metameta-002-01,
     run-des3-008-metameta-002-02,
+    run-des3-008-metameta-002-03,
 ]
