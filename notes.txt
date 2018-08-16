@@ -203,3 +203,8 @@ large bias
     boundaries in the simulatd sample
     - still have not ensured the distribution of sizes makes
     sense
+
+
+- dbsim-des3ce-01
+    - set a noise  image from random empty patch
+    - mcal-05 use the noise image
