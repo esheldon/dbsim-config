@@ -11,7 +11,7 @@
 #
 
 
-nobj: 540
+nobj: 590
 
 # 1.3x1.3 arcminutes
 # the 0.3 arcmin gives boundary of 34 pixels
