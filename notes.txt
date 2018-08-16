@@ -197,3 +197,9 @@ large bias
     - run 02 also doing shears on individual objects
         rather than whole group
         same
+
+- dbsim-des3ce-01
+    - use a smooth function for r50-flux to better avoid
+    boundaries in the simulatd sample
+    - still have not ensured the distribution of sizes makes
+    sense
