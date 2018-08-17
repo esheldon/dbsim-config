@@ -46,9 +46,10 @@ background:
 # to use as noise fields
 noise_images:
     set_noise_images: true
-    check_seg: true
-    ncheck: 10
+    check_seg: false
     negate: false
+
+    #ncheck: 10
 
 # source extractor config
 sx:

@@ -45,10 +45,7 @@ background:
 # find random empy patches from the images
 # to use as noise fields
 noise_images:
-    set_noise_images: true
-    check_seg: true
-    ncheck: 10
-    negate: false
+    set_noise_images: false
 
 # source extractor config
 sx:
