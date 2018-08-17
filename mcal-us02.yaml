@@ -1,0 +1,65 @@
+# this one with uberseg in mof and metacal
+# run mof then metacal
+fitter: 'metacal'
+
+# currently there is only one place to do this, can't
+# do only mof or only metacal uberseg
+weight_type: 'uberseg'
+
+fofs:
+    find_fofs: false
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        # we know the psf is round
+        #psf: 'gauss'
+        use_noise_image: true
+        types: ['noshear','1p','1m','2p','2m']
+
+    model: 'gauss'
+
+    max_pars:
+        ntry: 2
+        pars:
+            method: 'lm'
+            lm_pars:
+                maxfev: 2000
+                xtol: 5.0e-5
+                ftol: 5.0e-5
+
+ 
+    priors:
+        cen:
+            type: 'normal2d'
+            sigma: 0.02
+
+        g:
+            type: 'ba'
+            sigma: 0.2
+
+        T:
+            type: 'log-normal'
+            mean: 0.5
+            sigma: 1.0
+
+        flux:
+            type: 'log-normal'
+            mean: 800.0
+            sigma: 420.0
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+
