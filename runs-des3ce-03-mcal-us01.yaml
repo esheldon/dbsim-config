@@ -1,0 +1,4 @@
+runs: [
+    run-des3ce-03-mcal-us01-01,
+    run-des3ce-03-mcal-us01-02,
+]

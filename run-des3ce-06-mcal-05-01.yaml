@@ -1,0 +1,11 @@
+# subtract random sky patch
+sim: dbsim-des3ce-06
+
+# MOF and uberseg
+fit: mcal-05
+
+ntrials: 1600000
+
+sec_per: 28
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

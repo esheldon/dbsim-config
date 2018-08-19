@@ -1,0 +1,8 @@
+sim: dbsim-des3ce-03
+fit: mcal-us01
+
+ntrials: 1600000
+
+sec_per: 28
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

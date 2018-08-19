@@ -1,0 +1,12 @@
+# subtract random sky patch
+sim: dbsim-des3ce-07
+
+# MOF and uberseg, log normal size and
+# flux dist
+fit: mcal-06
+
+ntrials: 1600000
+
+sec_per: 28
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
