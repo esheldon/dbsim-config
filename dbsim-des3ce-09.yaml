@@ -31,6 +31,7 @@ positions:
 # simple pixel scale for wcs
 pixel_scale: 0.263
 
+# whoops, bug
 psf:
     model: 'gauss'
     fwhm: 0.9
@@ -105,9 +106,6 @@ pdfs:
         # for mimicing year 3 we add more noise
 
         flux_mult: 250.0
-
-    disk:
-        color: [1.25, 1.0, 0.75]
 
     disk:
         color: [1.25, 1.0, 0.75]

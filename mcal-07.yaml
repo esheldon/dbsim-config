@@ -90,7 +90,6 @@ metacal:
             ftol: 1.0e-5
             xtol: 1.0e-5
 
-
 mof:
 
     detband: 2
