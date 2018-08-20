@@ -1,0 +1,132 @@
+# with background subtraction
+#    background size is 256 almost as
+#    big as the image, if this doesn't work
+#    might try larger images
+#
+# copied over some background params from
+# Y3
+#
+# Y3 sx pars for extraction
+# fft draw and exp only
+#
+
+
+nobj: 250
+
+# 1.3x1.3 arcminutes
+# the 0.3 arcmin gives boundary of 34 pixels
+# on both sides, which should be good enough
+# for the max 64 pixel boxes (32 radius)
+
+dims: [300, 300]
+
+positions:
+    type: 'uniform'
+
+    # this leaves a 128 pixel boundary
+    # about 70.8 square arcmin
+    #width: 505.0
+    width: 60.0
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+psf:
+    model: 'gauss'
+    fwhm: 0.9
+
+noise_sigma: 100.0
+
+# y3 values
+background:
+    measure: true
+    config:
+        back_size: 256
+        filter_width: 3
+
+# find random empy patches from the images
+# to use as noise fields
+noise_images:
+    set_noise_images: false
+
+# source extractor config
+sx:
+    # in sky sigma
+    #DETECT_THRESH
+    detect_thresh: 1.1
+
+    # Minimum contrast parameter for deblending
+    #DEBLEND_MINCONT
+    deblend_cont: 0.001
+
+    minarea: 9
+
+    filter_type: 'conv'
+
+    # 7x7 convolution mask of a gaussian PSF with FWHM = 3.0 pixels.
+    filter_kernel:  [
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.068707, 0.296069, 0.710525, 0.951108, 0.710525, 0.296069, 0.068707],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+    ]
+
+meds:
+    rad_min: 4
+    min_box_size: 32
+    max_box_size: 64
+    box_padding: 2
+
+# any galsim draw method
+draw_method: 'phot'
+
+# nois in psf image, should be very small
+psf_noise_sigma: 0.0001
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 3
+
+pdfs:
+    g:
+        sigma: 0.2
+
+    # hlr of the disk
+    hlr_flux:
+        type: cosmos-extrap
+
+        # 250 is what was used in nbrsim and gives 10/sq arcmin
+        # or about des 5 year with noise of 100 for 1 band
+        # or 175 for each of 3 bands
+        # for mimicing year 3 we add more noise
+
+        flux_mult: 250.0
+
+    disk:
+        color: [1.25, 1.0, 0.75]
+
+    bulge:
+        color: [0.5, 1.0, 1.5]
+
+        # g_bulge=g_fac*g_disk
+        g_fac:
+            type: uniform
+            range: [0.5, 1.0]
+
+        fracdev:
+            type: uniform
+            range: [0.0, 1.0]
+
+        # bulge_hlr=hlr_fac*disk_hlr
+        hlr_fac: 
+            type: uniform
+            range: [0.9, 1.1]
+
+        # shift in units of the disk hlr
+        bulge_shift: 0.05
+
+
+shear: [0.02, 0.00]
