@@ -1,0 +1,8 @@
+sim: dbsim-y5sx-02
+fit: mcal-07
+
+ntrials: 1600000
+
+sec_per: 35
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
