@@ -1,5 +1,7 @@
 # going for y3 depth, but using y5 sx settings
 
+sim_type: 'dbsim'
+
 nobj: 250
 
 # 1.6x1.6 arcminutes
