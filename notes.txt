@@ -222,3 +222,8 @@ run-des3ce-10-mcal-07-01
 # adopting y5 sx settings
     dbsim-y5sx-01
     run-y5sx-01-mcal-07-01.yaml
+
+# maybe box sizes are screwing things up?  Letting
+# it be continuous now
+# maybe try fixing it or using the usual 32,48,64..?
+# more boundary?
