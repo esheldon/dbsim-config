@@ -227,3 +227,6 @@ run-des3ce-10-mcal-07-01
 # it be continuous now
 # maybe try fixing it or using the usual 32,48,64..?
 # more boundary?
+
+# ok running with more standard box sizes
+# but might need to still use old linking?
