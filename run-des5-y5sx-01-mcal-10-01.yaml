@@ -1,0 +1,12 @@
+sim: dbsim-des5-y5sx-01
+fit: mcal-10
+
+#ntrials: 1600000
+# high shear 0.08, so can use (8/2)**2 = 16 times
+# fewer
+ntrials: 100000
+
+# factor of two high for average, to be safe
+sec_per: 120.0
+desired_hours: 0.5
+jobs_per_condor_sub: 1000
