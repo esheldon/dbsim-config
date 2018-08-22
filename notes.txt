@@ -1,3 +1,39 @@
+what I know currently
+----------------------
+
+- works ok when all objects are above detection threshold
+
+- bias is minus few percent in all cases where there were objects below
+  threshold
+    - R are too high
+
+- caveat:  I also saw it for low noise.
+
+- see bias with our without uberseg (consistent with above, that it is about
+  undetected objects not deblending per se.)
+  - I thought it was maybe a selection effect but I doubt this, because it
+    occurs even when far above thresholds
+
+- didn't see this in the Y1 simulations "nbrsim"
+
+- see it even if matching to truth (which I did in nbrsim)
+
+ideas
+------
+
+- run on nbrsim?
+- do something linear in the data so we could make a correction based on
+  random field?
+    - For linear estimator, would expect R = Robj + Rnbr, could estimate Rnbr
+      from a random area
+    - all I could imagine is a weighted moment, but I know that doesn't work
+      too well
+        - super low R values, and I saw some bias as I recall
+
+tests
+-------
+
+
 - seeing big bias for 4 objects. maybe not too surprising, the density
   is quite high, 51/sq arcmin.  But note the density is really higher
   because they are distributed as a gaussian around the center.
@@ -230,3 +266,7 @@ run-des3ce-10-mcal-07-01
 
 # ok running with more standard box sizes
 # but might need to still use old linking?
+
+
+
+
