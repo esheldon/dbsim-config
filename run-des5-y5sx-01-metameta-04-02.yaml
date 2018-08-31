@@ -1,0 +1,9 @@
+sim: dbsim-des5-y5sx-01
+fit: metameta-04
+
+ntrials: 1_000_000
+
+# extra for big groups
+sec_per: 42.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
