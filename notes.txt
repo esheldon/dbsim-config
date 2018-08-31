@@ -270,3 +270,66 @@ run-des3ce-10-mcal-07-01
 
 
 
+# re-trying meta-detect which did seem to help
+    - des5-y5sx-01
+       lsst package for sim
+       high shear 0.08, expect 4-5 e-3 bias positive
+
+    - runs-des5-y5sx-01-metameta-03
+    - uberseg max fitting only, no MOF
+
+    s/n > 10 T/Tpsf > 0.5
+        num: 11711556
+        R: [0.81823473 0.8361825 ]
+        errors are 3 sigma
+        m: 4.31132793e-03 +/- 3.25067104e-03  c: -9.71650793e-05 +/-
+        2.52974114e-04
+
+    s/n > 15 T/Tpsf > 0.5
+
+        num: 8308399
+        R: [0.99625244 1.01663743]
+        errors are 3 sigma
+        m: 6.30418886e-03 +/- 3.49874748e-03  c: -1.00912067e-04 +/- 2.73746215e-04
+
+    These look consistent with the expected bias at shear 0.08, about
+    4-6e-3 (depends on the details)
+
+   - run-des5-y5sx-01-metameta-04-01
+       this one doing MOF with exp
+
+       some long ones still running
+
+        s/n > 10 T/Tpsf > 0.5
+
+        num: 10038318
+        R: [0.83063286 0.84920812]
+        errors are 3 sigma
+        m: 7.24775806e-03 +/- 3.52080180e-03  c: 1.17676384e-04 +/- 2.74083331e-04
+
+
+        s/n > 15 T/Tpsf > 0.5
+
+        num: 7050615
+        R: [1.01121167 1.03391868]
+        errors are 3 sigma
+        m: 8.87607882e-03 +/- 3.80160538e-03  c: 7.87301581e-05 +/- 2.97106900e-04
+
+   - run-des5-y5sx-01-metameta-04-02
+        was worried the catalog might have a mean e1 or e2 so
+        did another onw with randomized pos angles for both bulge and disk (meant
+        to make them equal to one another)
+
+        - looks about the same
+
+
+    - want to do lower shear tests
+        - do trick with one +0.01 and the other -0.01 but
+          same seeds to cancel some shape noise and just look
+          at diffshear = shear1-shear2 to construct
+              m = 1-diffshear/0.02
+              merr = diffshear_err/0.02
+          get the errors from jackknifing
+
+        runs-des5-y5sx-02p-metameta-03
+        runs-des5-y5sx-02m-metameta-03
