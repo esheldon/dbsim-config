@@ -333,3 +333,6 @@ run-des3ce-10-mcal-07-01
 
         runs-des5-y5sx-02p-metameta-03
         runs-des5-y5sx-02m-metameta-03
+
+    - need to do one of these that isn't meta-detect to see what the
+      bias is for reference
