@@ -1,0 +1,11 @@
+# same seed as dbsim-des5-y5sx-02p to cancel shape noise
+sim: dbsim-des5-y5sx-03m
+fit: metameta-03
+
+seed: 985
+
+ntrials: 1_000_000
+
+sec_per: 17.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

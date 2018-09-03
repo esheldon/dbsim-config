@@ -1,0 +1,11 @@
+sim: dbsim-des5-y5sx-03m
+fit: mcal-11
+
+seed: 16680
+
+ntrials: 1_000_000
+
+# why taking longer?
+sec_per: 30.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
