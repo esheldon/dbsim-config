@@ -362,3 +362,46 @@ run-des3ce-10-mcal-07-01
         run-des5-ma9-01m-mcal-seg01-01
 
 
+tests with pairs of objects, one at center, other on ring
+---------------------------------------------------------
+
+Low noise tests
+===============
+
+objects with mcal s/n ~ 125
+
+    - uberseg only, no MOF
+        - run-epair-ln01-mcal-12-01
+            R: [0.71771628 0.71957432]
+            total wsum: 10001242.0
+            errors are 3 sigma
+            m: -3.11263635e-02 +/- 3.25594725e-03
+            c: 3.39740435e-04 +/- 6.50184269e-05
+
+        - zero shear version
+            shear_meas:     [-0.00265389  0.00037351]
+            shear_meas_err: [2.17084029e-05 2.16973029e-05]
+
+          what?
+
+    - no uberseg or MOF. Quite noisy
+        - runs-epair-ln01-mcal-wt12
+            R: [0.99810619 0.9810617 ]
+            total wsum: 49264648.0
+            errors are 3 sigma
+            m: -1.72621523e-03 +/- 8.03104737e-03
+            c: 9.96706031e-06 +/- 1.62527159e-04
+        - zero shear version
+            shear_meas:     [ 2.27015747e-05 -7.94343485e-05]
+            shear_meas_err: [0.00011881 0.00012035]
+
+    - MOF subtracted, no uberseg
+        - runs-epair-ln01-mcal-fof12
+        - so far
+
+            R: [0.8888532  0.88947336]
+            total wsum: 9978468.0
+            errors are 3 sigma
+            m: -1.22512644e-03 +/- 1.52254014e-03
+            c: 1.69133140e-05 +/- 3.04151866e-05
+        - more running
