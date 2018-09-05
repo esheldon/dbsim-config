@@ -1,0 +1,115 @@
+# assumes psf is round gaussian
+fitter: 'metacal'
+
+weight_type: 'weight'
+
+fofs:
+    find_fofs: true
+
+    # name in meds file, or catalog if method is catalog_radius
+    radius_column: "iso_radius"
+
+    # factor to multiply radius this happens before clipping to [min_radius,
+    # max_radius] for a low threshold, the isoarea is basically covering all
+    # the observed flux, so mult of 1 makes sense
+    radius_mult: 1.0
+
+    # clip the radius in pixels=sqrt(isoarea_image/pi)
+    # 5 pixels is about 3 sigma for a 1'' FWHM gaussian
+    # this happens after the radius_mult is applied
+    min_radius: 4
+    max_radius: null
+
+    # This is added to the radius. This kind of padding makes sense for radii
+    # based on the iso area.  Padding happens after mult and clipping
+    padding: 2
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        # assuming psf is round
+        #psf: 'gauss'
+        types: ['noshear','1p','1m','2p','2m']
+
+    model: 'gauss'
+
+    max_pars:
+        ntry: 2
+        pars:
+            method: 'lm'
+            lm_pars:
+                maxfev: 2000
+                xtol: 5.0e-5
+                ftol: 5.0e-5
+
+ 
+    priors:
+        cen:
+            type: 'normal2d'
+            sigma: 0.263
+
+        g:
+            type: 'ba'
+            sigma: 0.2
+
+        T:
+            type: 'two-sided-erf'
+            pars: [-1.0, 0.1, 1.0e+06, 1.0e+05]
+
+        flux:
+            type: 'two-sided-erf'
+            pars: [-100.0, 1.0, 1.0e+09, 1.0e+08]
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+
+mof:
+
+    detband: 0
+
+    model: 'exp'
+    
+    priors:
+        cen:
+            type: 'normal2d'
+            sigma: 0.263
+
+        g:
+            type: 'ba'
+            sigma: 0.2
+
+        T:
+            type: 'two-sided-erf'
+            pars: [-1.0, 0.1, 1.0e+06, 1.0e+05]
+
+        #fracdev:
+        #    type: 'normal'
+        #    cen: 0.5
+        #    sigma: 0.1
+
+        flux:
+            type: 'two-sided-erf'
+            pars: [-100.0, 1.0, 1.0e+09, 1.0e+08]
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+

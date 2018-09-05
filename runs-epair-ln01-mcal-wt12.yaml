@@ -1,0 +1,4 @@
+runs: [
+    run-epair-ln01-mcal-wt12-01,
+    run-epair-ln01-mcal-wt12-02,
+]

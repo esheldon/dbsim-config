@@ -1,0 +1,18 @@
+# pair with 8 pixel separation (very close!)
+# zero shear
+sim: dbsim-epair-ln01
+
+# MOF subtraction without uberseg in final
+# measurement
+fit: mcal-fof12
+
+seed: 20940
+
+# get 2 per
+ntrials: 5_000_000
+
+# boosting for slow file system with overhead
+# loading python modules
+sec_per: 0.60
+desired_hours: 0.25
+jobs_per_condor_sub: 1000
