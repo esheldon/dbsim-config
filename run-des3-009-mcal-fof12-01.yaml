@@ -1,0 +1,12 @@
+sim: dbsim-des3-009
+
+# MOF subtraction without uberseg in final
+# measurement
+fit: mcal-fof12
+
+# get 24 per, 7.5 per after nominal cuts
+ntrials: 12_00_000
+
+sec_per: 17.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
