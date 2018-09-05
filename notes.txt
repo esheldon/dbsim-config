@@ -327,7 +327,7 @@ run-des3ce-10-mcal-07-01
         - do trick with one +0.01 and the other -0.01 but
           same seeds to cancel some shape noise and just look
           at diffshear = shear1-shear2 to construct
-              m = 1-diffshear/0.02
+              m = diffshear/0.02 - 1
               merr = diffshear_err/0.02
           get the errors from jackknifing
 
@@ -338,3 +338,27 @@ run-des3ce-10-mcal-07-01
       bias is for reference
       run-des5-y5sx-02p-mcal-11-01
       run-des5-y5sx-02m-mcal-11-01
+
+      s2n > 10
+      errors are 3 sigma
+      m: -3.72679224e-02 +/- 1.30455721e-02
+
+- metacal assumptions that might be broken
+    1 linearity
+    2 noise known
+    3 psf known (no)
+
+    2 use unique pixels for measurement (cweight)
+        # make sure we have some area in seg maps, so set
+        # minarea 9
+        dbsim-des5-ma9-01p.yaml
+        dbsim-des5-ma9-01m.yaml
+
+        # use cweight
+        mcal-seg01.yaml
+
+        # runs
+        run-des5-ma9-01p-mcal-seg01-01
+        run-des5-ma9-01m-mcal-seg01-01
+
+
