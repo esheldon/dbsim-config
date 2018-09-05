@@ -405,3 +405,15 @@ objects with mcal s/n ~ 125
             m: -1.22512644e-03 +/- 1.52254014e-03
             c: 1.69133140e-05 +/- 3.04151866e-05
         - more running
+            R: [0.88885333 0.88948947]
+            total wsum: 49982322.0
+            errors are 3 sigma
+            m: -3.77919338e-04 +/- 6.80098061e-04
+            c: 3.87208699e-06 +/- 1.35911188e-05
+
+trying this config on des3 like sim 
+
+    - dbsim-des3-009
+        - exp galaxies so deblending should be good
+          using exp in mcal-fof12.  gauss psf.
+    - run-des3-009-mcal-fof12-01
