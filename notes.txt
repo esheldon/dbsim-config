@@ -365,8 +365,8 @@ run-des3ce-10-mcal-07-01
 tests with pairs of objects, one at center, other on ring
 ---------------------------------------------------------
 
-Low noise tests
-===============
+Low noise pair tests
+=====================
 
 objects with mcal s/n ~ 125
 
@@ -384,7 +384,8 @@ objects with mcal s/n ~ 125
 
           what?
 
-    - no uberseg or MOF. Quite noisy
+    - no uberseg or MOF. shape noise high due to unmasked/unsubtracted
+          neighbor
         - runs-epair-ln01-mcal-wt12
             R: [0.99810619 0.9810617 ]
             total wsum: 49264648.0
@@ -416,4 +417,34 @@ trying this config on des3 like sim
     - dbsim-des3-009
         - exp galaxies so deblending should be good
           using exp in mcal-fof12.  gauss psf.
-    - run-des3-009-mcal-fof12-01
+    - runs-des3-009-mcal-fof12
+        s2n > 10 some bias
+            R: [0.49658447 0.50040219]
+            Rsel: [0.01764054 0.01871706]
+            total wsum: 35082859.0
+            without selection correction
+            errors are 3 sigma
+            m: 2.49060438e-02 +/- 8.86872050e-03  c: 4.56946508e-05 +/- 1.74645972e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -1.02534609e-02 +/- 8.56447815e-03  c: 4.40471116e-05 +/- 1.68349040e-04
+
+        s2n > 15 some bias
+            R: [0.59699891 0.60033741]
+            Rsel: [0.01179296 0.01375821]
+            total wsum: 15552249.0
+            without selection correction
+            errors are 3 sigma
+            m: 4.54218138e-03 +/- 1.10460536e-02  c: 3.49131804e-06 +/- 2.17712439e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -1.49168964e-02 +/- 1.08320795e-02  c: 3.41309849e-06 +/- 2.12834805e-04
+
+
+    - descwl sim
+        - des3-ma9-01
+    - bdf and coellip2 psf for MOF
+        - mcal-f0f13
+    - run-des3-ma9-01-mcal-fof13-01
