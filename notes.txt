@@ -412,6 +412,16 @@ objects with mcal s/n ~ 125
         do in real data unless we have a coadd for the group.  For better test
         we would metacal the stamps only and redo MOF.
 
+        num: 9721060
+        R:
+         [[ 9.60142407e-01  2.71246149e-06]
+          [-5.47173977e-05  9.61020274e-01]]
+          shear: 0.019998 +/- 0.000011 -0.000003 +/- 0.000011
+          errors are 1 sigma
+          m: -7.66147012e-05 +/- 5.26072530e-04  c: -3.14583520e-06 +/- 1.05136717e-05
+       
+       XXX need to run more
+
 trying this config on des3 like sim 
 
     - dbsim-des3-009
