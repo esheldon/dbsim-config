@@ -448,3 +448,31 @@ trying this config on des3 like sim
     - bdf and coellip2 psf for MOF
         - mcal-f0f13
     - run-des3-ma9-01-mcal-fof13-01
+
+        s2n > 10
+            R: [0.61120297 0.61536046]
+            Rsel: [0.07175001 0.07453318]
+            total wsum: 18318423.0
+            without selection correction
+            errors are 3 sigma
+            m: 9.56526652e-02 +/- 1.17497207e-02  c: 4.20358633e-04 +/- 2.30585671e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -1.94549574e-02 +/- 1.05153127e-02  c: 3.74944873e-04 +/- 2.05674176e-04
+
+            note
+                - the additive error here
+                - the very large selection correction
+
+        s2n > 15
+            R: [0.73371656 0.73269095]
+            Rsel: [0.08366659 0.08777162]
+            total wsum: 12944036.0
+            without selection correction
+            errors are 3 sigma
+            m: 8.25022223e-02 +/- 1.19810076e-02  c: 4.59923066e-04 +/- 2.37796450e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -2.83017166e-02 +/- 1.07546426e-02  c: 4.10721316e-04 +/- 2.12357410e-04
