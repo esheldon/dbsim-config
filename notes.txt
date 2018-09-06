@@ -398,19 +398,19 @@ objects with mcal s/n ~ 125
 
     - MOF subtracted, no uberseg
         - runs-epair-ln01-mcal-fof12
-        - so far
 
-            R: [0.8888532  0.88947336]
-            total wsum: 9978468.0
-            errors are 3 sigma
-            m: -1.22512644e-03 +/- 1.52254014e-03
-            c: 1.69133140e-05 +/- 3.04151866e-05
-        - more running
             R: [0.88885333 0.88948947]
             total wsum: 49982322.0
             errors are 3 sigma
             m: -3.77919338e-04 +/- 6.80098061e-04
             c: 3.87208699e-06 +/- 1.35911188e-05
+
+            some negative bias
+
+    - run-epair-ln01-metamof12-01
+        metacal mof process, shearing full image which we can't
+        do in real data unless we have a coadd for the group.  For better test
+        we would metacal the stamps only and redo MOF.
 
 trying this config on des3 like sim 
 
