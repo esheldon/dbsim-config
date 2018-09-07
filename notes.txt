@@ -1,3 +1,6 @@
+TODO
+try symmetrizing mask
+
 what I know currently
 ----------------------
 
