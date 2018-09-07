@@ -1,0 +1,19 @@
+# assumes psf is round
+fitter: 'metacal-am'
+
+weight_type: 'weight'
+
+fofs:
+    find_fofs: false
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        # assuming psf is round
+        #psf: 'gauss'
+        types: ['noshear','1p','1m','2p','2m']
