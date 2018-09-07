@@ -433,6 +433,16 @@ objects with mcal s/n ~ 125
 
           maybe a bit better than not metamofing
 
+    - run-epair-ln01-symwt12-01
+        - symmetrize uberseg
+        R: [0.7091136  0.71089007]
+        Rpsf: [0. 0.]
+        total wsum: 10001268.0
+        shear_meas:     [0.01958322 0.00050547]
+        shear_meas_err: [2.36277287e-05 2.36314654e-05]
+    - run-epair-ln01-symwt12-02
+        - doing all rotations
+
 
 trying this config on des3 like sim 
 
@@ -465,8 +475,8 @@ trying this config on des3 like sim
             m: -1.49168964e-02 +/- 1.08320795e-02  c: 3.41309849e-06 +/- 2.12834805e-04
 
     - runs-des3-009-mcal-wt12
-        - trying with no mof and no masking
-
+        - trying with no mof and no masking!
+        - some bias at +2% level
 
 
 
