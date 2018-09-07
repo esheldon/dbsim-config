@@ -399,13 +399,13 @@ objects with mcal s/n ~ 125
             shear_meas:     [ 2.27015747e-05 -7.94343485e-05]
             shear_meas_err: [0.00011881 0.00012035]
         - high noise version
-        R: [0.71816878 0.71033972]
-        total wsum: 10489604.0
-        errors are 3 sigma
-        m: -8.68981316e-03 +/- 2.15645454e-02  c: 5.01184373e-05 +/-
-        4.35199542e-04
 
-        running more
+            R: [0.71768377 0.71142751]
+            total wsum: 89039676.0
+            errors are 3 sigma
+            m: -1.66608831e-03 +/- 7.40796710e-03
+            c: 4.80127515e-05 +/- 1.49113393e-04
+
 
     - MOF subtracted, no uberseg
         - runs-epair-ln01-mcal-fof12
@@ -463,6 +463,11 @@ trying this config on des3 like sim
             with selection correction
             errors are 3 sigma
             m: -1.49168964e-02 +/- 1.08320795e-02  c: 3.41309849e-06 +/- 2.12834805e-04
+
+    - runs-des3-009-mcal-wt12
+        - trying with no mof and no masking
+
+
 
 
     - descwl sim
