@@ -1,0 +1,12 @@
+# pair with 8 pixel separation (very close!)
+sim: dbsim-epair-ln01
+
+# symmetrized uberseg
+fit: mcal-symwt12
+
+# get 2 per
+ntrials: 5_000_000
+
+sec_per: 0.5
+desired_hours: 0.25
+jobs_per_condor_sub: 1000
