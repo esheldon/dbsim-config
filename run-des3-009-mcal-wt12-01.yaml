@@ -1,0 +1,13 @@
+sim: dbsim-des3-009
+
+# no MOF or masking at all
+fit: mcal-wt12
+
+# get 24 per, 7.5 per after nominal cuts
+ntrials: 6_00_000
+
+# making larger than it needs to be by about 1 second,
+# to make up for file system slowness
+sec_per: 17.0
+desired_hours: 0.5
+jobs_per_condor_sub: 1000
