@@ -1,0 +1,98 @@
+# exp only to make sure the deblending should be pretty good
+# psf round gaussian
+
+sim_type: simple
+
+positions:
+    type: 'uniform'
+
+    # limit with in arcminute box
+    # objects with get shifts +/- width/2
+    width: 60.0 # arcminute
+
+# 1.3x1.3 arcminutes
+# the boundary should contain the max box size of 64
+dims: [300, 300]
+
+nobj: 110
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+# sqrt(5/3) higher 225 gives about 7.1
+# use 216 a bit higher, 7.5 ish
+noise_sigma: 216.0
+
+measure_background: false
+
+# source extractor config from Y3
+sx:
+    # in sky sigma
+    #DETECT_THRESH
+    detect_thresh: 1.1
+
+    # Minimum contrast parameter for deblending
+    #DEBLEND_MINCONT
+    deblend_cont: 0.001
+
+    minarea: 4
+
+    filter_type: 'conv'
+
+    # 7x7 convolution mask of a gaussian PSF with FWHM = 3.0 pixels.
+    filter_kernel:  [
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.068707, 0.296069, 0.710525, 0.951108, 0.710525, 0.296069, 0.068707],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+    ]
+
+
+meds:
+    box_type: sigma_size
+    sigma_fac: 5.0
+
+    min_box_size: 32
+    max_box_size: 128
+
+# any galsim draw method
+draw_method: 'fft'
+
+psf:
+    model: gauss
+    fwhm: 0.9
+    noise_sigma: 0.0001
+
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 3
+coadd: true
+
+pdfs:
+    g:
+        sigma: 0.2
+
+    # hlr of the disk
+    hlr_flux:
+        type: cosmos
+
+        r50_range: [0.15, 1.0]
+        flux_range: [2.5, 100.0]
+
+
+        # 250 is what was used in nbrsim and gives 10/sq arcmin
+        # or about des 5 year with noise of 100 for 1 band
+        # or 175 for each of 3 bands
+        # for mimicing year 3 we add more noise
+
+        flux_mult: 250.0
+
+    disk:
+        color: [1.25, 1.0, 0.75]
+
+
+shear: [0.02, 0.00]
