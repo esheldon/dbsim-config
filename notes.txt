@@ -571,3 +571,16 @@ trying this config on des3 like sim
             m: -3.16941206e-02 +/- 5.12338124e-03  c: -3.47257958e-05 +/- 1.02410709e-04
 
             also tried limiting R range but it swung way the other direction
+
+            s2n > 15 Trat > 1.2
+            R: [0.77215308 0.77449111]
+            Rsel: [-0.01710874 -0.01710726]
+            total wsum: 62067811.0
+            without selection correction
+            errors are 3 sigma
+            m: -5.01611626e-02 +/- 6.43643550e-03  c: 2.02342555e-05 +/- 1.28357318e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -2.86385219e-02 +/- 6.58228034e-03  c: 2.06912927e-05 +/- 1.31256563e-04
+
