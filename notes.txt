@@ -483,6 +483,10 @@ objects with mcal s/n ~ 125
             errors are 3 sigma
             m: -5.43929494e-02 +/- 4.55411926e-03  c: -1.07212217e-05 +/- 9.10704552e-05
 
+    - run-epair-ln01-mofavg01-01
+        - average 3 random realizations of metacal
+    - run-epair-01-mofavg01-01
+        - average 3 random realizations of metacal
 
 trying this config on des3 like sim 
 
