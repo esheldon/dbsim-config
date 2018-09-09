@@ -5,7 +5,7 @@ sim: dbsim-epair-01
 fit: mcal-amavg01
 
 # get 2 per
-ntrials: 20_000_000
+ntrials: 40_000_000
 
 # over-estimate
 sec_per: 0.5
