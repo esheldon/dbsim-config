@@ -1,5 +1,6 @@
 TODO
-try symmetrizing mask
+cutting R dist on pair mofam and am
+also coadd des3 run -7,9 or so
 
 what I know currently
 ----------------------
@@ -433,6 +434,24 @@ objects with mcal s/n ~ 125
 
           maybe a bit better than not metamofing
 
+    - run-epair-01-mcal-metamof12-01
+        num: 98331152
+        R:
+         [[ 4.75332155e-01  1.26469448e-04]
+          [-6.88606695e-05  4.76136570e-01]]
+          errors are 3 sigma
+          m: -3.64319267e-02 +/- 4.08990456e-03  c: 1.22000445e-06 +/- 8.17710330e-05
+
+    - runs-epair-01-metamofavg01
+        - do max like solution for mean in fof group
+        - might still be buggy
+        num: 50023671
+        R:
+         [[ 5.32441310e-01 -4.61877623e-05]
+          [-1.40968514e-04  5.33710083e-01]]
+          errors are 3 sigma
+          m: -4.28295404e-02 +/- 4.22667339e-03  c: 2.50512163e-05 +/- 8.45391775e-05
+
     - run-epair-ln01-symwt12-01
         - symmetrize uberseg
         R: [0.7091136  0.71089007]
@@ -440,8 +459,29 @@ objects with mcal s/n ~ 125
         total wsum: 10001268.0
         shear_meas:     [0.01958322 0.00050547]
         shear_meas_err: [2.36277287e-05 2.36314654e-05]
+
     - run-epair-ln01-symwt12-02
         - doing all rotations
+        R: [0.64491725 0.64575926]
+        Rpsf: [0. 0.]
+        total wsum: 9428665.0
+        errors are 3 sigma
+        m: -9.31109239e-03 +/- 5.06676561e-03  c: 2.91049002e-04 +/- 1.02238793e-04
+
+    - adaptive moments
+        - run-epair-01-mcal-am01-01
+            R: [1.00220331 1.01214291]
+            Rpsf: [0. 0.]
+            total wsum: 75051823.0
+            errors are 3 sigma
+            m: 1.01519977e-02 +/- 8.75220292e-03  c: -1.60241859e-05 +/- 1.73237590e-04
+
+        - run-epair-01-mcal-mofam01-01
+            R: [0.90845108 0.90905859]
+            Rpsf: [0. 0.]
+            total wsum: 78679317.0
+            errors are 3 sigma
+            m: -5.43929494e-02 +/- 4.55411926e-03  c: -1.07212217e-05 +/- 9.10704552e-05
 
 
 trying this config on des3 like sim 
@@ -513,3 +553,21 @@ trying this config on des3 like sim
             with selection correction
             errors are 3 sigma
             m: -2.83017166e-02 +/- 1.07546426e-02  c: 4.10721316e-04 +/- 2.12357410e-04
+
+    - run-des3-010c-mcal-am01-01
+        coadded and did am no mof
+
+            s2n > 10 Trat > 1.2
+
+            R: [0.74530066 0.74721347]
+            Rsel: [0.01311108 0.01291965]
+            total wsum: 133577532.0
+            without selection correction
+            errors are 3 sigma
+            m: -1.46600069e-02 +/- 5.21351006e-03  c: -3.53262203e-05 +/- 1.04181436e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -3.16941206e-02 +/- 5.12338124e-03  c: -3.47257958e-05 +/- 1.02410709e-04
+
+            also tried limiting R range but it swung way the other direction
