@@ -2,10 +2,10 @@
 sim: dbsim-epair-01
 
 # uberseg only gauss fit
-fit: mcal-am01
+fit: mcal-amavg01
 
 # get 2 per
-ntrials: 40_000_000
+ntrials: 20_000_000
 
 # over-estimate
 sec_per: 0.5
