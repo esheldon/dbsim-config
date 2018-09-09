@@ -443,6 +443,10 @@ objects with mcal s/n ~ 125
     - run-epair-ln01-symwt12-02
         - doing all rotations
 
+    - run-epair-ln01-mofavg01-01
+        - average 3 random realizations of metacal
+    - run-epair-01-mofavg01-01
+        - average 3 random realizations of metacal
 
 trying this config on des3 like sim 
 
