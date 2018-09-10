@@ -485,8 +485,23 @@ objects with mcal s/n ~ 125
 
     - run-epair-ln01-mofavg01-01
         - average 3 random realizations of metacal
+        R: [0.88882547 0.88949669]
+        Rpsf: [0. 0.]
+        total wsum: 40005034.0
+        errors are 3 sigma
+        m: -7.21845563e-05 +/- 6.84768395e-04  c: -1.30190174e-06 +/-
+        1.36859738e-05
+
     - run-epair-01-mofavg01-01
         - average 3 random realizations of metacal
+        R: [0.50087174 0.50122511]
+        Rpsf: [0. 0.]
+        total wsum: 37497958.0
+        errors are 3 sigma
+        m: -6.01018235e-02 +/- 5.10122114e-03  c: -2.55472204e-05 +/-
+        1.01976071e-04
+
+
 
 trying this config on des3 like sim 
 
