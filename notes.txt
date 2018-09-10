@@ -501,7 +501,18 @@ objects with mcal s/n ~ 125
         m: -6.01018235e-02 +/- 5.10122114e-03  c: -2.55472204e-05 +/-
         1.01976071e-04
 
+    - run-epair-ln01-mcal-fullmmof01-01
+        Full MOF meta
 
+        num: 10001858
+        R:
+         [[ 9.60512455e-01 -3.80573701e-05]
+          [-1.60693199e-05  9.61595071e-01]]
+          shear: 0.020011 +/- 0.000010 0.000001 +/- 0.000010
+          errors are 3 sigma
+          m: 5.54627991e-04 +/- 1.55568169e-03  c: 9.65704888e-07 +/- 3.10773711e-05
+
+    - run-epair-01-mcal-fullmmof01-01
 
 trying this config on des3 like sim 
 
