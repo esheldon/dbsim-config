@@ -1,0 +1,11 @@
+# pair with 8 pixel separation (very close!)
+sim: dbsim-epair-01
+
+fit: mcal-fmsim01
+
+# get 2 per
+ntrials: 20_000_000
+
+sec_per: 1.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
