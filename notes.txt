@@ -369,9 +369,6 @@ run-des3ce-10-mcal-07-01
 tests with pairs of objects, one at center, other on ring
 ---------------------------------------------------------
 
-Low noise pair tests
-=====================
-
 objects with mcal s/n ~ 125
 
     - uberseg only, no MOF
@@ -513,6 +510,37 @@ objects with mcal s/n ~ 125
           m: 5.54627991e-04 +/- 1.55568169e-03  c: 9.65704888e-07 +/- 3.10773711e-05
 
     - run-epair-01-mcal-fullmmof01-01
+
+
+
+    - added priors
+        # different size/shape objects some low s/n so need cuts
+
+        run-epair-03-metamof02-01
+        huge bias
+        s/n > 15 Trat > 0.5
+        num: 43236800
+        R:
+         [[ 7.30609457e-01  1.32300847e-04]
+          [-3.21450117e-04  7.30899957e-01]]
+          shear: 0.018134 +/- 0.000036 -0.000018 +/- 0.000037
+          errors are 3 sigma
+          m: -9.33022838e-02 +/- 5.47394476e-03
+          c: -1.80472271e-05 +/- 1.09816230e-04
+
+        run-epair-03-mof01-01
+        this one doing mof sub first then metacal
+            R: [0.67902659 0.6792786 ]
+            Rpsf: [0. 0.]
+            total wsum: 1746645.0
+            shear_meas:     [1.85545919e-02 8.95133286e-05]
+            shear_meas_err: [0.0001858  0.00018637]
+            writing:
+            /gpfs/mnt/gpfs01/astro/workarea/esheldon/lensing/dbsim/run-epair-03-mcal-mof01-01/fit-m-c/run-epair-03-mcal-mof01-01-means.fits
+            errors are 3 sigma
+            m: -7.22704042e-02 +/- 2.78698490e-02  c: 8.95133286e-05 +/- 5.59121232e-04
+
+        similar with selections
 
 trying this config on des3 like sim 
 
