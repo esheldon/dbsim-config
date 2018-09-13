@@ -521,12 +521,36 @@ objects with mcal s/n ~ 125
 
         # widening prior on g to 0.3
         run-epair-03-metamof03-01
+        num: 19251789
+        R:
+         [[7.65149492e-01 5.78342945e-05]
+          [1.93519927e-04 7.66328174e-01]]
+          shear: 0.018968 +/- 0.000058 0.000059 +/- 0.000058
+          errors are 3 sigma
+          m: -5.16031235e-02 +/- 8.63159180e-03  c: 5.85927633e-05 +/-
+          1.72663505e-04
+
 
         # widening prior on g to 0.3 and guessing from priors
         run-epair-03-metamof04-01
+        num: 19253686
+        R:
+         [[ 7.65365453e-01 -3.45069534e-05]
+          [ 8.71685660e-05  7.66911941e-01]]
+          shear: 0.019157 +/- 0.000058 0.000006 +/- 0.000058
+          errors are 3 sigma
+          m: -4.21596525e-02 +/- 8.63354081e-03  c: 6.23060772e-06 +/-
+          1.72606767e-04
 
         # widening prior on g to 0.3 and guessing from priors
         run-epair-03-fullmmof02-01
+        R:
+         [[7.68822524e-01 2.38644138e-05]
+          [2.20870424e-04 7.69071790e-01]]
+          shear: 0.018991 +/- 0.000058 -0.000033 +/- 0.000058
+          errors are 3 sigma
+          m: -5.04673580e-02 +/- 8.63979469e-03  c: -3.33601166e-05 +/-
+          1.72973732e-04
 
 trying this config on des3 like sim 
 
