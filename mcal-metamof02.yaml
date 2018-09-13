@@ -60,12 +60,12 @@ mof:
             sigma: 0.20
 
         T:
-            type: 'normal'
+            type: 'log-normal'
             mean: 0.66
             sigma: 0.41
 
         flux:
-            type: 'normal'
+            type: 'log-normal'
             mean: 7.0
             sigma: 2.1
 

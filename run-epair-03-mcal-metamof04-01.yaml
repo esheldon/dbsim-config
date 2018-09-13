@@ -3,7 +3,8 @@
 # pair with 8 pixel separation (very close!)
 sim: dbsim-epair-03
 
-fit: mcal-metamof02
+# wider g prior 0.3 guessing from prior
+fit: mcal-metamof04
 
 # get 2 per
 ntrials: 10_000_000
