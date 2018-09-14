@@ -1,0 +1,4 @@
+runs: [
+    run-epair-04-metadetect-01-01,
+    run-epair-04-metadetect-01-02,
+]

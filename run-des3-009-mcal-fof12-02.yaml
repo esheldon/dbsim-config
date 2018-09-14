@@ -5,7 +5,7 @@ sim: dbsim-des3-009
 fit: mcal-fof12
 
 # get 24 per, 7.5 per after nominal cuts
-ntrials: 24_00_000
+ntrials: 2_400_000
 
 sec_per: 17.0
 desired_hours: 1.0

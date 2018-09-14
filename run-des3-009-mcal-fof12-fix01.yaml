@@ -1,3 +1,4 @@
+# after fixing MOF convergence criteria
 sim: dbsim-des3-009
 
 # MOF subtraction without uberseg in final
@@ -5,7 +6,7 @@ sim: dbsim-des3-009
 fit: mcal-fof12
 
 # get 24 per, 7.5 per after nominal cuts
-ntrials: 1_200_000
+ntrials: 2_000_000
 
 sec_per: 17.0
 desired_hours: 1.0
