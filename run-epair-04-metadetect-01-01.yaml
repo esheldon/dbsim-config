@@ -1,0 +1,15 @@
+# mof using ftol,xtol 1.0e-7
+
+# pair with 8 pixel separation (very close!)
+sim: dbsim-epair-04
+
+# wider g prior 0.3 guessing from prior
+fit: metadetect-01
+
+# get 2 per
+ntrials: 10_000_000
+
+# over-estimate
+sec_per: 0.5
+desired_hours: 0.25
+jobs_per_condor_sub: 1000

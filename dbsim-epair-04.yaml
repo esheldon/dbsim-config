@@ -1,3 +1,4 @@
+# lower noise for meta-detect
 sim_type: pair
 
 dims: [64, 64]
@@ -10,9 +11,8 @@ positions:
 # simple pixel scale for wcs
 pixel_scale: 0.263
 
-# give about s/n=15 for each object when deblended
-# using mcal-metamof01
-noise_sigma: 0.001
+# sqrt(2) lower than dbsim-epair-03 for meta-detect
+noise_sigma: 0.403
 
 background:
     measure: false
@@ -69,7 +69,7 @@ psf:
 
 pdfs:
     g:
-        sigma: 0.02
+        sigma: 0.20
 
     hlr:
         type: 'log-normal'
