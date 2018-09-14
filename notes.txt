@@ -552,6 +552,32 @@ objects with mcal s/n ~ 125
           m: -5.04673580e-02 +/- 8.63979469e-03  c: -3.33601166e-05 +/-
           1.72973732e-04
 
+    - ideas
+        - we saw that doing a sim of the fits gave perfect shear recovery
+        - I suppose we would expect it to also work for this configuration
+        - why does it not work?
+            - when we miss an object, the sim just contains that one object
+              found, unlike the real data
+            - so it might be related to having a 'missed' neighbor there, but
+              then why does the version with two same objects work when we
+              specify the prior?  Because we will get close to the right
+              answer for one object then because we forced it to be so.  There
+              is no model mis-specification
+            - Note it probably isn't guesses, I drew from priors in some of
+              the tests
+            - Maybe the detection has a bias related to the shear value, and
+              this isn't being corrected for.  Try meta-detect again?  Would
+              need lower noise to start with so we can actually detect things
+            - other approaches
+                - simulate with delta g as Niall is doing (but use wrong
+                  priors to see if we can still get a correction)
+                - try to figure out how many objects there are rather than
+                  trusting sep
+
+    - meta-detect
+        - run-epair-03-metadetect-01-01.yaml
+        - run-epair-03-metadetect-01-02.yaml
+
 trying this config on des3 like sim 
 
     - dbsim-des3-009
