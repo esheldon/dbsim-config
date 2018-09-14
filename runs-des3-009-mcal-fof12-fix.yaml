@@ -1,0 +1,4 @@
+runs: [
+    run-des3-009-mcal-fof12-fix01,
+    run-des3-009-mcal-fof12-fix02,
+]
