@@ -514,6 +514,20 @@ objects with mcal s/n ~ 125
 
 
     - added priors
+        - run-epair-02-metamof01-metamof01
+        - still same objects as run-epair-ln01 and run-epair-01
+        priors from fitting low noise run-epair-ln01
+            num: 100024793
+            R:
+             [[8.07076227e-01 8.80484227e-05]
+              [3.28904779e-05 8.08441663e-01]]
+              shear: 0.019988 +/- 0.000015 -0.000000 +/- 0.000015
+              errors are 3 sigma
+              m: -6.14776322e-04 +/- 2.22842316e-03
+              c: -4.82298727e-07 +/- 4.45045984e-05
+
+
+
         # different size/shape objects some low s/n so need cuts
 
         run-epair-03-metamof02-01
@@ -568,6 +582,11 @@ objects with mcal s/n ~ 125
             - Maybe the detection has a bias related to the shear value, and
               this isn't being corrected for.  Try meta-detect again?  Would
               need lower noise to start with so we can actually detect things
+
+            - maybe for the selection corrections to work properly, we need
+              to select and then re-deblend.  Scary because what if the
+              selection involved removing *bright* sources!
+
             - other approaches
                 - simulate with delta g as Niall is doing (but use wrong
                   priors to see if we can still get a correction)
@@ -575,12 +594,170 @@ objects with mcal s/n ~ 125
                   trusting sep
 
     - meta-detect
-        - run-epair-03-metadetect-01-01.yaml
-        - run-epair-03-metadetect-01-02.yaml
+        - runs-epair-03-metadetect-01
+            num: 111691873
+            R:
+             [[ 7.10468155e-01 -3.97093660e-05]
+              [-1.43839382e-04  7.11947458e-01]]
+              shear: 0.020124 +/- 0.000026 0.000031 +/- 0.000026
+              errors are 3 sigma
+              m: 6.17844376e-03 +/- 3.90700660e-03  c: 3.14931577e-05 +/- 7.81247441e-05
+
+        - s2n15Trat0.5
+            num: 62016254
+            R:
+             [[ 6.98195752e-01 -1.65644108e-04]
+              [-1.49594572e-04  6.97639375e-01]]
+              shear: 0.020184 +/- 0.000036 0.000040 +/- 0.000036
+              errors are 3 sigma
+              m: 9.18446059e-03 +/- 5.38149087e-03  c: 4.01775426e-05 +/- 1.08020962e-04
+
+        - dbsim-epair-04 lower noise than dbsim-epair-03 by sqrt(2)
+            num: 18567843
+            R:
+             [[8.04882994e-01 1.78756191e-04]
+              [3.01529758e-04 8.05225353e-01]]
+              shear: 0.019946 +/- 0.000055 0.000047 +/- 0.000055
+              errors are 3 sigma
+              m: -2.68840333e-03 +/- 8.24900654e-03  c: 4.68388804e-05 +/- 1.65221337e-04
+
+        s2n15Trat0.5
+        not very strict cut for this sim
+            num: 15966207
+            R:
+             [[ 8.06498982e-01 -2.04585513e-04]
+              [ 2.47413831e-05  8.06429916e-01]]
+              shear: 0.019977 +/- 0.000059 0.000026 +/- 0.000059
+              errors are 3 sigma
+              m: -1.15275819e-03 +/- 8.88795157e-03  c: 2.59342580e-05 +/- 1.78093049e-04
+
+        s2n20Trat0.5
+            num: 10057629
+            R:
+             [[ 7.75258749e-01 -1.08559513e-04]
+              [ 9.07778329e-05  7.73622925e-01]]
+              shear: 0.020014 +/- 0.000078 0.000013 +/- 0.000078
+              errors are 3 sigma
+              m: 6.87090677e-04 +/- 1.16388758e-02  c: 1.31693727e-05 +/- 2.33799004e-04
+
+        Note the number where only 1 was found is 10% for 04 compared to 14%
+        for 03.  so bias must be dominated by something else.  note also the
+        selection correction doesn't work for 03 (need more stats on 04)
+
+wider separated pair, 18 pixels.  link everything because currently
+not being linked
+
+    - so new linking will leave flux from neighbors often at the edge of
+    the stamps, and this might be part of the issues.
+    - runs-epair16-01-mcal-la03
+    -  s2n15Trat0.5
+        R: [0.70166556 0.70213658]
+        Rsel: [0.0089363  0.00918107]
+        total wsum: 29982833.0
+        without selection correction
+        errors are 3 sigma
+        m: 1.37223605e-02 +/- 6.44262204e-03  c: 1.51100307e-05 +/- 1.28726549e-04
+
+        with selection correction
+        errors are 3 sigma
+        m: 9.74109968e-04 +/- 6.36160168e-03  c: 1.49150034e-05 +/- 1.27065058e-04
+
+    - more running
+
+- doing similar sims with objects placed randomly, as before
+    - runs-small02-mcal-mofbuff01
+    - seeing bias
+
+        s2n10Trat0.5
+
+		R: [0.56232498 0.56272609]
+		Rsel: [0.01297388 0.01292848]
+		total wsum: 35444019.0
+		without selection correction
+		errors are 3 sigma
+		m: -6.61784517e-03 +/- 7.57736560e-03  c: 2.67935366e-05 +/- 1.51535377e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -2.90201488e-02 +/- 7.40648429e-03  c: 2.61917871e-05 +/- 1.48132081e-04
+
+
+
+        s2n15Trat0.5
+
+		R: [0.67661063 0.67709984]
+		Rsel: [0.00367083 0.00371363]
+		total wsum: 16126184.0
+		without selection correction
+		errors are 3 sigma
+		m: -2.00071466e-02 +/- 9.30867174e-03  c: 4.97740823e-06 +/- 1.86095654e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -2.52952360e-02 +/- 9.25844169e-03  c: 4.95025801e-06 +/- 1.85080560e-04
+
+        s2n20Trat0.5
+
+		R: [0.74175502 0.7419678 ]
+		Rsel: [-0.00430717 -0.00471497]
+		total wsum: 8372650.0
+		without selection correction
+		errors are 3 sigma
+		m: -2.57808833e-02 +/- 1.17054742e-02  c: -1.25542470e-04 +/- 2.34155565e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -2.00908110e-02 +/- 1.17738418e-02  c: -1.26345354e-04 +/- 2.35653064e-04
+
+    - using config from nbrsim
+
+
+        s2n10Trat0.5
+
+		R: [0.55745054 0.55779993]
+		Rsel: [0.01083092 0.0109523 ]
+		total wsum: 27873385.0
+		without selection correction
+		errors are 3 sigma
+		m: 8.71330329e-03 +/- 8.72072487e-03  c: 4.00560784e-05 +/- 1.74399418e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -1.05118439e-02 +/- 8.55451588e-03  c: 3.92847297e-05 +/- 1.71041057e-04
+
+	    s2n15Trat0.5
+
+		R: [0.6718935  0.67263151]
+		Rsel: [0.00249177 0.00174443]
+		total wsum: 12981705.0
+		without selection correction
+		errors are 3 sigma
+		m: -6.94574382e-03 +/- 1.05092937e-02  c: 7.12253633e-05 +/- 2.09979409e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -1.06149531e-02 +/- 1.04704632e-02  c: 7.10411228e-05 +/- 2.09436250e-04
+
+        s2n20Trat0.5
+
+		R: [0.73828037 0.73923801]
+		Rsel: [-0.00453754 -0.00510085]
+		total wsum: 6722740.0
+		without selection correction
+		errors are 3 sigma
+		m: -1.23523348e-02 +/- 1.31141680e-02  c: 1.22109619e-04 +/- 2.61912799e-04
+
+		with selection correction
+		errors are 3 sigma
+		m: -6.24462119e-03 +/- 1.31952674e-02  c: 1.22958047e-04 +/- 2.63732591e-04
+
+
+
 
 trying this config on des3 like sim 
 
     - dbsim-des3-009
+        - using y3 sextractor settings
         - exp galaxies so deblending should be good
           using exp in mcal-fof12.  gauss psf.
     - runs-des3-009-mcal-fof12
@@ -607,6 +784,9 @@ trying this config on des3 like sim
             with selection correction
             errors are 3 sigma
             m: -1.49168964e-02 +/- 1.08320795e-02  c: 3.41309849e-06 +/- 2.12834805e-04
+
+
+        - rerunning after improving mof convergence
 
     - runs-des3-009-mcal-wt12
         - trying with no mof and no masking!
