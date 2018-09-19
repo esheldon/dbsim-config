@@ -1,0 +1,10 @@
+sim: dbsim-small02
+
+fit: mcal-mofbuff01
+
+ntrials: 2_800_000
+
+# over-estimate
+sec_per: 9.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

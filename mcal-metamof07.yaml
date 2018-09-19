@@ -1,0 +1,86 @@
+# this one very tight priors on size and flux but
+# wrong priors
+# assumes psf is round gaussian
+fitter: 'mof'
+
+meta:
+    dometa: true
+    type: 'meta-mof'
+
+weight_type: 'weight'
+
+fofs:
+    find_fofs: true
+
+    # name in meds file, or catalog if method is catalog_radius
+    radius_column: "iso_radius"
+
+    # factor to multiply radius this happens before clipping to [min_radius,
+    # max_radius] for a low threshold, the isoarea is basically covering all
+    # the observed flux, so mult of 1 makes sense
+    radius_mult: 1.0
+
+    # clip the radius in pixels=sqrt(isoarea_image/pi)
+    # 5 pixels is about 3 sigma for a 1'' FWHM gaussian
+    # this happens after the radius_mult is applied
+    min_radius: 4
+    max_radius: null
+
+    # This is added to the radius. This kind of padding makes sense for radii
+    # based on the iso area.  Padding happens after mult and clipping
+    padding: 2
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        # assuming psf is round
+        #psf: 'gauss'
+        types: ['noshear','1p','1m','2p','2m']
+
+mof:
+
+    detband: 0
+
+    model: 'exp'
+    
+    guess_from_priors: true
+
+    priors:
+
+        cen:
+            type: 'normal2d'
+            sigma: 0.263
+
+        g:
+            type: 'ba'
+            sigma: 0.30
+
+        # wrong prior, but tight
+        T:
+            type: 'normal'
+
+            mean: 0.66
+            sigma: 0.015
+
+
+        # wrong prior, but tight
+        flux:
+            type: 'normal'
+            mean: 7.0
+            sigma: 0.05
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+

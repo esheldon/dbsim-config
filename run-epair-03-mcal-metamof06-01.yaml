@@ -1,0 +1,14 @@
+# using wrong priors
+
+# pair with 8 pixel separation (very close!)
+sim: dbsim-epair-03
+
+fit: mcal-metamof06
+
+# get 2 per
+ntrials: 20_000_000
+
+# over-estimate
+sec_per: 0.5
+desired_hours: 0.5
+jobs_per_condor_sub: 1000
