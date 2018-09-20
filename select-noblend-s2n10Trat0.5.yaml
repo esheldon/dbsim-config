@@ -1,0 +1,4 @@
+select: "(s2n > 10) & (Tratio > 0.5)"
+
+cut_nbrs:
+    cut_all: true

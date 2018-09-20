@@ -1,4 +1,5 @@
 # small sim with simple pdfs
+# higher noise than small01
 sim_type: simple
 
 dims: [300, 300]
