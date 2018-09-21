@@ -3,7 +3,7 @@ sim_type: simple
 
 dims: [300, 300]
 
-nobj: 75
+nobj: 20
 
 positions:
     type: 'uniform'
@@ -15,7 +15,7 @@ positions:
 # simple pixel scale for wcs
 pixel_scale: 0.263
 
-noise_sigma: 84.0
+noise_sigma: 1.0
 
 background:
     measure: false
