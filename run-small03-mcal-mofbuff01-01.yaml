@@ -2,7 +2,7 @@ sim: dbsim-small03
 
 fit: mcal-mofbuff01
 
-ntrials: 2_000_000
+ntrials: 1_000_000
 
 # over-estimate
 sec_per: 6.0
