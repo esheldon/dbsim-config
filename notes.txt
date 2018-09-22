@@ -861,3 +861,60 @@ trying this config on des3 like sim
             errors are 3 sigma
             m: -2.86385219e-02 +/- 6.58228034e-03  c: 2.06912927e-05 +/- 1.31256563e-04
 
+
+
+
+
+- take exact same set of galaxies with low noise and high noise
+- dbsim-small03
+    - objects all have s/n > 50
+
+    R: [0.89717673 0.89775475]
+    total wsum: 135325634.0
+    errors are 3 sigma
+    m: -4.19483203e-03 +/- 2.39986414e-03  c: 1.92357708e-05 +/- 4.79788505e-05
+
+- dbsim-small03a
+    - runs-small03a-moffbuff01
+    - more noise, now only half detected
+
+    s2nTrat0.5
+        R: [0.66602745 0.66654851]
+
+        Rsel: [0.00330231 0.00318938]
+        total wsum: 108141034.0
+        without selection correction
+        errors are 3 sigma
+        m: -8.11859481e-04 +/- 3.58957354e-03  c: -2.76565659e-05 +/- 7.17287622e-05
+
+        with selection correction
+        errors are 3 sigma
+        m: -5.74160445e-03 +/- 3.57186348e-03  c: -2.75248616e-05 +/- 7.13871802e-05
+
+    s2n15Trat0.5
+
+        R: [0.76025643 0.76090945]
+
+        Rsel: [-0.00435858 -0.00448581]
+        total wsum: 70038808.0
+        without selection correction
+        errors are 3 sigma
+        m: -1.11997557e-02 +/- 3.92913667e-03  c: -3.34511130e-05 +/- 7.85147275e-05
+
+        with selection correction
+        errors are 3 sigma
+        m: -5.49823655e-03 +/- 3.95179246e-03  c: -3.36494875e-05 +/- 7.89803419e-05
+
+    s2n20Trat0.5
+
+        R: [0.80692087 0.8075505 ]
+
+        Rsel: [-0.00970706 -0.00968402]
+        total wsum: 49700601.0
+        without selection correction
+        errors are 3 sigma
+        m: -1.71157838e-02 +/- 4.38956957e-03  c: -6.22381622e-06 +/- 8.77260203e-05
+
+        with selection correction
+        errors are 3 sigma
+        m: -5.14795491e-03 +/- 4.44301800e-03  c: -6.29935710e-06 +/- 8.87907852e-05
