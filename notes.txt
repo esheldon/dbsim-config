@@ -918,3 +918,15 @@ trying this config on des3 like sim
         with selection correction
         errors are 3 sigma
         m: -5.14795491e-03 +/- 4.44301800e-03  c: -6.29935710e-06 +/- 8.87907852e-05
+
+- the issue seems to be having an undetected neighbor.  This causes the object
+  to be detected as bigger and brighter.  And most importantly the response
+  is over-estimated.
+
+  - we know it worked when we fixed the priors to be the exact object, so good
+    deblending always makes it work.
+  - is it partly because of some instability in the fit?
+  - try using the mof parameters as a strong prior on T and F, but not on cen
+    and g, to see if this stabilizes the fit.
+
+  - run-epair-04pix-mcal-mofbuffprior01-01
