@@ -1,0 +1,11 @@
+sim: dbsim-epair-04pix
+
+fit: mcal-mofbuff01
+
+# get 2 per
+ntrials: 20_000_000
+
+# over-estimate
+sec_per: 0.6
+desired_hours: 0.5
+jobs_per_condor_sub: 1000
