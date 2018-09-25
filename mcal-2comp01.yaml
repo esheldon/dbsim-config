@@ -1,0 +1,101 @@
+fitter: 'metacal-2comp'
+
+# currently there is only one place to do this, can't
+# do only mof or only metacal uberseg
+weight_type: 'weight'
+
+fofs:
+    find_fofs: true
+
+    method: 'stamps'
+
+    buff_type: 'tot'
+    buff_frac: 0.25
+    maxsize_to_replace: 256
+    new_maxsize: 384
+    check_seg: True
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        #psf: 'gauss'
+        types: ['noshear','1p','1m','2p','2m']
+
+# main MOF 
+mof:
+
+    detband: 0
+
+    model: 'exp'
+    
+    priors:
+        cen:
+            type: 'normal2d'
+            sigma: 0.263
+
+        g:
+            type: 'ba'
+            sigma: 0.3
+
+        T:
+            type: 'two-sided-erf'
+            pars: [-0.1, 0.1, 1.0e+06, 1.0e+05]
+
+        flux:
+            type: 'two-sided-erf'
+            pars: [-100.0, 1.0, 1.0e+09, 1.0e+08]
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+
+# MOF for the two component fitting
+# currently the same
+mof_2comp:
+
+    model: 'exp'
+    ntry: 2
+    
+    priors:
+        cen:
+            type: 'normal2d'
+            sigma: 0.263
+
+        g:
+            type: 'ba'
+            sigma: 0.3
+
+        T:
+            type: 'two-sided-erf'
+            pars: [-0.1, 0.1, 1.0e+06, 1.0e+05]
+
+        flux:
+            type: 'from-pars-lognorm'
+            # log-normal with width sigma_frac*flux
+            sigma_frac: 0.5
+        #flux:
+        #    type: 'two-sided-erf'
+        #    pars: [-100.0, 1.0, 1.0e+09, 1.0e+08]
+
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+
+
