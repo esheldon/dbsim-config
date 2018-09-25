@@ -1,0 +1,10 @@
+sim: dbsim-des3-y3sx-01
+
+fit: mcal-mofbuffprior04
+
+ntrials: 2_000_000
+
+# over-estimate
+sec_per: 30.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
