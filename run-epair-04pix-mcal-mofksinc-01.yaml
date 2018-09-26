@@ -1,0 +1,9 @@
+sim: dbsim-epair-04pix
+
+fit: mcal-mofksinc
+
+ntrials: 20_000
+
+sec_per: 8.3
+desired_hours: 0.51
+jobs_per_condor_sub: 1000
