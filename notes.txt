@@ -1,10 +1,7 @@
-TODO
-cutting R dist on pair mofam and am
-also coadd des3 run -7,9 or so
-
 what I know currently
 ----------------------
 
+- the bias occurs when there are  undetected blends
 - works ok when all objects are above detection threshold
 
 - bias is minus few percent in all cases where there were objects below
@@ -929,4 +926,207 @@ trying this config on des3 like sim
   - try using the mof parameters as a strong prior on T and F, but not on cen
     and g, to see if this stabilizes the fit.
 
+  - 4 pixel separation sim, so mostly detected as one object
+  - first a normal run
+  - run-epair-04pix-mcal-mofbuff01-01
+        R: [0.76051336 0.76111873]
+        total wsum: 20123443.0
+        errors are 3 sigma
+        m: -2.24732493e-02 +/- 8.07815014e-03  c: -2.10332036e-05 +/- 1.61503438e-04
+
   - run-epair-04pix-mcal-mofbuffprior01-01
+      - now very tight priors from mof pars
+
+        R: [0.79986059 0.80091833]
+        total wsum: 10059836.0
+        errors are 3 sigma
+        m: 5.91666360e-02 +/- 1.23536652e-02  c: 8.95081342e-06 +/- 2.46753935e-04
+
+  - looser priors, but not tuned.  10% for flux and a fixed width for
+    T since it can go small or negative
+
+  - run-epair-04pix-mcal-mofbuffprior02-01
+        R: [0.84473801 0.84566327]
+        total wsum: 4987103.0
+        errors are 3 sigma
+        m: -3.43809314e-03 +/- 1.67977655e-02  c: -8.30230542e-06 +/- 3.35524390e-04
+
+  - still disk only and exp model fit and prior
+      - runs-des3-011-mcal-mofbuffprior02
+          - due to using y3 sx pars, s2n10 is not a good cut
+          - s2n15Trat0.5
+            R: [0.71085179 0.71179352]
+
+            Rsel: [-0.01074889 -0.01003512]
+            total wsum: 16763911.0
+            without selection correction
+            errors are 3 sigma
+            m: -1.03898614e-02 +/- 1.02404847e-02  c: 4.36426411e-05 +/- 2.04530738e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: 4.80391440e-03 +/- 1.03977099e-02  c: 4.42667291e-05 +/- 2.07455519e-04
+          - s2n20Trat0.5
+            R: [0.7474625  0.74831885]
+
+            Rsel: [-0.03125238 -0.02965788]
+            total wsum: 6436005.0
+            without selection correction
+            errors are 3 sigma
+            m: -3.98779217e-02 +/- 1.54752544e-02  c: 1.12721793e-04 +/- 3.09287505e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: 2.01775056e-03 +/- 1.61505291e-02  c: 1.17373625e-04 +/- 3.22051260e-04
+
+  - now make model bulge and disk
+  - also density of total objects needed to be bumped up to get to 7.5
+      - run-des3-012-mcal-mofbuffprior02bdf-01
+          - s2n15Trat0.5
+
+              R: [0.6431739  0.64366281]
+
+              Rsel: [-0.00633525 -0.00566373]
+              total wsum: 15480683.0
+              without selection correction
+              errors are 3 sigma
+              m: -5.08110058e-02 +/- 1.16198159e-02  c: -5.28938368e-05 +/- 2.32265993e-04
+
+              with selection correction
+              errors are 3 sigma
+              m: -4.13685082e-02 +/- 1.17354094e-02  c: -5.33633926e-05 +/- 2.34327893e-04
+
+          - s2n20Trat0.5
+                R: [0.68794966 0.6884245 ]
+
+                Rsel: [-0.01678967 -0.01700244]
+                total wsum: 6505914.0
+                without selection correction
+                errors are 3 sigma
+                m: -6.13396501e-02 +/- 1.64825978e-02  c: -6.09977910e-05 +/- 3.29548917e-04
+
+                with selection correction
+                errors are 3 sigma
+                m: -3.78582126e-02 +/- 1.68949249e-02  c: -6.25424399e-05 +/- 3.37894094e-04
+
+      - run-des3-012-mcal-mofbuffprior02-01
+          - trying exp just to see if it is a fit stability issue (doubt it)
+          - Very similar!
+          - s2n15Trat0.5
+            R: [0.62651173 0.62746085]
+
+            Rsel: [-0.00321272 -0.00266087]
+            total wsum: 2358560.0
+            without selection correction
+            errors are 3 sigma
+            m: -4.74735256e-02 +/- 2.92705048e-02  c: 7.56498871e-05 +/- 5.85469969e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -4.25638470e-02 +/- 2.94213760e-02  c: 7.59720613e-05 +/- 5.87963341e-04
+
+          - s2n20Trat0.5
+            R: [0.66630358 0.66736096]
+
+            Rsel: [-0.01187154 -0.01417895]
+            total wsum: 973348.0
+            without selection correction
+            errors are 3 sigma
+            m: -4.99459344e-02 +/- 4.21076606e-02  c: 1.58967696e-04 +/- 8.42023801e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -3.27117426e-02 +/- 4.28715029e-02  c: 1.62418487e-04 +/- 8.60302032e-04
+
+      X TODO maybe try doing bdf for deblending, then to another fit with exp to get
+      the prior and guesser, then feed that into metacal
+
+  - descwl sims
+      - runs-des3-y3sx-01-mcal-mofbuffprior03
+      - exp fitting for deblend and metacal
+          - s2n15Trat0.5
+            R: [0.79088741 0.78884123]
+
+            Rsel: [0.00351185 0.00341544]
+            total wsum: 16965375.0
+            without selection correction
+            errors are 3 sigma
+            m: -5.40316283e-03 +/- 1.17279981e-02  c: 5.35735787e-04 +/- 2.35067571e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -9.80003365e-03 +/- 1.16761515e-02  c: 5.33426215e-04 +/- 2.34054188e-04
+
+          - s2n20Trat0.5
+            R: [0.84513335 0.84284088]
+
+            Rsel: [0.00320462 0.00331124]
+            total wsum: 12727829.0
+            without selection correction
+            errors are 3 sigma
+            m: -2.12742050e-04 +/- 1.24666325e-02  c: 4.90963175e-04 +/- 2.49910081e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -3.98946429e-03 +/- 1.24195395e-02  c: 4.89041890e-04 +/- 2.48932109e-04
+
+      - bdf fitting for deblend and metacal
+          - s2n15Trat0.5
+            R: [0.8060234  0.80085586]
+
+            Rsel: [0.00314972 0.00255549]
+            total wsum: 17608556.0
+            without selection correction
+            errors are 3 sigma
+            m: -8.37985356e-03 +/- 1.21943807e-02  c: 1.48608126e-03 +/- 2.45261186e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -1.22397538e-02 +/- 1.21469139e-02  c: 1.48135433e-03 +/- 2.44481058e-04
+
+          - s2n20Trat0.5
+            R: [0.86009914 0.85592413]
+
+            Rsel: [0.002019   0.00143297]
+            total wsum: 13122169.0
+            without selection correction
+            errors are 3 sigma
+            m: -2.87383565e-03 +/- 1.27480971e-02  c: 1.15038532e-03 +/- 2.55911121e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -5.20901454e-03 +/- 1.27182422e-02  c: 1.14846259e-03 +/- 2.55483396e-04
+
+  - maybe because it is so odd shaped and has two peaks, etc. the center will
+    need to move more, but this change is instead being put into the
+    ellipticity
+  - the fact that moments fail; does this not imply that it must be
+    interpolation errors?
+  - ideas
+      - x_interpolant
+          - higher or lower?
+          - tried lanczos3, R looked consistent with lanczos15
+          - setting conserve_dc to False for lanczos15 in real space, looks
+            about the same
+          - setting tol to 1.0e-5 rather than 1.0e-4. Looks about the same
+          - quintic, looks about the same
+
+      - pad_factor, interpolation in k space
+          - trying 10 instead of default 4, no change
+      - k_interpolant
+          * using lanczos15 puts R exactly where it needs to be to get an
+            unbiased answer, assuming the mean shape isn't altered. It is
+            8 times slower.  Can we get this effect by tweaking a different
+            parameter?
+                - firing off a test on condor
+          - using lanczos5 gives very different R, much lower, don't know if
+            this is reflected in shape.
+          - using lanczos7 also gives much lower R
+          - quintic with tol to 1.0e-5 rather than 1.0e-4 does give a somewhat
+            lower R
+          - quintic with tol to 1.0e-8 rather than 1.0e-4 we get back to the
+            old R again.... odd
+          - sinc, I have a config but it is gonna be too slow
+      - quintic for both, same
+      - quintic for both and pad_factor 6, same
+
