@@ -1115,6 +1115,8 @@ trying this config on des3 like sim
 
       - pad_factor, interpolation in k space
           - trying 10 instead of default 4, no change
+      - quintic for both k and x, pad factor 6
+          - same bias
       - k_interpolant
           * using lanczos15 
 
