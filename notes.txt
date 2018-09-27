@@ -1110,15 +1110,19 @@ trying this config on des3 like sim
             about the same
           - setting tol to 1.0e-5 rather than 1.0e-4. Looks about the same
           - quintic, looks about the same
+          - using linear gives about the right R but the mean shape seems to
+            also have changed
 
       - pad_factor, interpolation in k space
           - trying 10 instead of default 4, no change
       - k_interpolant
-          * using lanczos15 puts R exactly where it needs to be to get an
-            unbiased answer, assuming the mean shape isn't altered. It is
-            8 times slower.  Can we get this effect by tweaking a different
-            parameter?
-                - firing off a test on condor
+          * using lanczos15 
+
+              R: [0.74457201 0.75155812]
+              total wsum: 20063897.0
+              errors are 3 sigma
+              m: -1.94208520e-03 +/- 8.26462391e-03  c: -3.17543302e-05 +/- 1.63793500e-04
+
           - using lanczos5 gives very different R, much lower, don't know if
             this is reflected in shape.
           - using lanczos7 also gives much lower R
@@ -1130,3 +1134,32 @@ trying this config on des3 like sim
       - quintic for both, same
       - quintic for both and pad_factor 6, same
 
+  - run on more realistic dbsim-des3-012 with bulge and disk
+      - a great improvement!
+      - run-des3-012-mcal-mofkl15-01
+        s2n15Trat0.5
+            R: [0.48150069 0.48438506]
+            Rsel: [0.02218607 0.02228764]
+            total wsum: 2192954.0
+            writing:
+            without selection correction
+            errors are 3 sigma
+            m: 3.77379782e-02 +/- 3.37335307e-02  c: -7.40835764e-05 +/- 6.70790393e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: -7.97164158e-03 +/- 3.22476577e-02  c: -7.08247700e-05 +/- 6.41283502e-04
+
+        s2n20Trat0.5
+            R: [0.52318045 0.52549476]
+            Rsel: [0.01390264 0.01562688]
+            total wsum: 886265.0
+            shear_meas:     [ 0.02002623 -0.00027303]
+            shear_meas_err: [0.00031694 0.00031463]
+            without selection correction
+            errors are 3 sigma
+            m: 2.79198153e-02 +/- 4.88040761e-02  c: -2.81151702e-04 +/- 9.71950485e-04
+
+            with selection correction
+            errors are 3 sigma
+            m: 1.31164612e-03 +/- 4.75407606e-02  c: -2.73032411e-04 +/- 9.43881835e-04
