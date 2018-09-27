@@ -29,9 +29,10 @@ metacal:
     metacal_pars:
         #psf: 'gauss'
         types: ['noshear','1p','1m','2p','2m']
-        interp: 'quintic'
-        kinterp: 'quintic'
-        pad_factor: 6
+        interp:
+            x_interpolant: 'quintic'
+            k_interpolant: 'quintic'
+            pad_factor: 6
 
     model: 'gauss'
 
