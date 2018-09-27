@@ -69,8 +69,8 @@ psf:
     noise_sigma: 0.0001
 
 pdfs:
-    g:
-        sigma: 0.02
+    #g:
+    #    sigma: 0.02
 
     hlr: 0.5
     flux: 135.0
