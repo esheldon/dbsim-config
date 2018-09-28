@@ -1,0 +1,4 @@
+runs: [
+run-epair-04pix-thresh1.5-mcal-wt01-01,
+run-epair-04pix-thresh1.5-mcal-wt01-02,
+]
