@@ -1179,3 +1179,10 @@ trying this config on des3 like sim
     - using mean center gives +2%
     - trying to now just take mean center and run em to get cen
     - run-epair-08pix-y3sx-mcal-emcen-wtmerge01-01
+
+    R: [0.79446372 0.79265505]
+    total wsum: 9920108.0
+    errors are 3 sigma
+    m: 5.52995661e-03 +/- 1.92063025e-02  c: -4.02259170e-05 +/- 3.84719010e-04
+
+    more running, we'll see
