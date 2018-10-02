@@ -1184,3 +1184,32 @@ trying this config on des3 like sim
         total wsum: 49843553.0
         errors are 1 sigma
         m: 1.36444933e-03 +/- 2.85922383e-03  c: -6.32849212e-05 +/- 5.71733434e-05
+
+- merging everything doesn't seem to work all that well from tests
+  with em.  Good enough?
+
+- since em worked well getting a center for the the merging of
+  the two object sim, maybe it is a more calibratable shape?
+
+  - first try high s/n two object but 4 pixels so sextrctor always
+    calls it one
+
+        - run-epair-04pixln-mcal-mofem01-01
+        - using standard kind of runner for PSF but gauss distributed runner,
+          with guess from lower noise version, for object.  4 gauss
+
+        - run-epair-04pix-y3sx02-mcal-mofem01-01.yaml
+            - s2n10
+                R: [0.43581458 0.47084199]
+                Rsel: [ 5.05937701e-05 -3.94197591e-04]
+                total wsum: 9868909.0
+                without selection correction
+                errors are 3 sigma
+                m: -1.18094189e-02 +/- 1.41038519e-02  c: 1.05757105e-04 +/- 3.17968017e-04
+
+                with selection correction
+                errors are 3 sigma
+                m: -1.19241247e-02 +/- 1.41022148e-02  c: 1.05845721e-04 +/- 3.18234449e-04
+
+        - run-epair-08pix-y3sxSN30-mcal-mofem01-01
+            - running
