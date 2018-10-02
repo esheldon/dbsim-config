@@ -1165,3 +1165,22 @@ trying this config on des3 like sim
             with selection correction
             errors are 3 sigma
             m: 1.31164612e-03 +/- 4.75407606e-02  c: -2.73032411e-04 +/- 9.43881835e-04
+
+- runs-epair-04pix-thresh1.5-mcal-wt01
+- altering detection to be Y5 with minarea 9 and thresh 1.5
+    - now works for no deblending
+        R: [0.76556868 0.76648193]
+        Rpsf: [0. 0.]
+        total wsum: 39275822.0
+        errors are 3 sigma
+        m: -4.91095176e-04 +/- 5.77426746e-03  c: 2.45359530e-05 +/- 1.15348877e-04
+
+- try merging fofs for the pair sims
+    - using mean center gives +2%
+    - trying to now just take mean center and run em to get cen
+    - run-epair-08pix-y3sx-mcal-emcen-wtmerge01-01
+
+        R: [0.79340559 0.7933719 ]
+        total wsum: 49843553.0
+        errors are 1 sigma
+        m: 1.36444933e-03 +/- 2.85922383e-03  c: -6.32849212e-05 +/- 5.71733434e-05
