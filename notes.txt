@@ -1213,3 +1213,15 @@ trying this config on des3 like sim
 
         - run-epair-08pix-y3sxSN30-mcal-mofem01-01
             - running
+            - s2n15
+                R: [0.39698308 0.42763653]
+                Rsel: [0.0001374  0.00022133]
+                total wsum: 28017232.0
+
+                without selection correction
+                errors are 3 sigma
+                m: 2.04884217e-03 +/- 7.83530039e-03  c: -7.31383858e-05 +/- 1.81689269e-04
+
+                with selection correction
+                errors are 3 sigma
+                m: 1.70214310e-03 +/- 7.83258945e-03  c: -7.31005518e-05 +/- 1.81595282e-04
