@@ -6,7 +6,6 @@
     - DETECT_MINAREA  6
     - DEBLEND_NTHRESH 32
     - DEBLEND_MINCONT 0.005
-    - gives 0.0003 two obj foundfrac
 
 - Y3
     - DETECT_THRESH   1.1
@@ -14,7 +13,6 @@
     - DETECT_MINAREA  4
     - DEBLEND_NTHRESH 32
     - DEBLEND_MINCONT 0.001
-    - gives 0.0022 two obj found frac
 
 - proposed Y5
     - DETECT_THRESH   0.8
@@ -22,25 +20,3 @@
     - DETECT_MINAREA  4
     - DEBLEND_NTHRESH 64
     - DEBLEND_MINCONT 0.00001
-    - gives 0.027 two obj found frac, note 0.001 for high s/n
-
-
-- what just worked for two close very objects
-    - DETECT_THRESH   1.5
-    - ANALYSIS_THRESH 1.5 # I think it must be same?
-    - DETECT_MINAREA  9
-    - DEBLEND_NTHRESH 64
-    - DEBLEND_MINCONT 0.00001
-
-    - gives none in 4000 two obj found frac
-
-    - but also note for the same objects at 8 pix separation
-    27% of the time none are found
-    70% 1
-    3% 2
-
-    The 27% no detect means there will be a detection bias I predict,
-    but it is also mixed with the problem of 1 vs 2
-
-    - note I had run with minarea 9 before and still saw the spurious detections,
-      so the DETECT_THRESH is also important here
