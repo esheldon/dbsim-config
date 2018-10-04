@@ -344,6 +344,12 @@ run-des3ce-10-mcal-07-01
       errors are 3 sigma
       m: -3.72679224e-02 +/- 1.30455721e-02
 
+   - dbsim-des3-y5sx-01
+       - a bit lower number density, more like Y3
+       - metadetect-03
+       - uberseg only, fitting exp
+       - runs-des3-y5sx-01-metadetect-03
+
 - metacal assumptions that might be broken
     1 linearity
     2 noise known
@@ -1225,3 +1231,5 @@ trying this config on des3 like sim
                 with selection correction
                 errors are 3 sigma
                 m: 1.70214310e-03 +/- 7.83258945e-03  c: -7.31005518e-05 +/- 1.81595282e-04
+
+        - running on des3-012 it completely blows up
