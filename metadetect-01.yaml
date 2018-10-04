@@ -1,4 +1,4 @@
-# good priors on size and flux
+# log-normal priors on size and flux
 # assumes psf is round gaussian
 fitter: 'mof'
 
