@@ -350,6 +350,7 @@ run-des3ce-10-mcal-07-01
        - uberseg only, fitting exp
 
            - runs-des3-y5sx-01-metadetect-03
+               1 sigma
                T/Tpsf > 0.5 S/N > 10 m: -5.49330261e-03 +/- 2.06278422e-03
                T/Tpsf > 0.5 S/N > 15 m: -3.23006845e-03 +/- 2.23691431e-03
                T/Tpsf > 0.5 S/N > 20 m: -2.13975620e-03 +/- 2.44531983e-03
@@ -357,12 +358,17 @@ run-des3ce-10-mcal-07-01
        - uberseg only but no meta-detect
            - runs-des3-y5sx-01-us04
                more running
+               1 sigma
                T/Tpsf > 0.5 S/N > 10  m: -2.14151275e-02 +/- 3.26982997e-03
                T/Tpsf > 0.5 S/N > 15  m: -1.74806068e-02 +/- 3.44116611e-03
 
        - MOF with less conservative Fof, but the caveat is that parts of the
          stamp will then have neighbors
            - runs-des3-y5sx-01-metadetect-02
+           - run 1/8 near finished
+           s2n10Trat0.5
+            errors are 1 sigma
+            m: 5.11061955e-03 +/- 9.86517315e-03  c: -3.06095835e-05 +/- 1.95841368e-04
 
 - metacal assumptions that might be broken
     1 linearity
