@@ -348,7 +348,21 @@ run-des3ce-10-mcal-07-01
        - a bit lower number density, more like Y3
        - metadetect-03
        - uberseg only, fitting exp
-       - runs-des3-y5sx-01-metadetect-03
+
+           - runs-des3-y5sx-01-metadetect-03
+               T/Tpsf > 0.5 S/N > 10 m: -5.49330261e-03 +/- 2.06278422e-03
+               T/Tpsf > 0.5 S/N > 15 m: -3.23006845e-03 +/- 2.23691431e-03
+               T/Tpsf > 0.5 S/N > 20 m: -2.13975620e-03 +/- 2.44531983e-03
+
+       - uberseg only but no meta-detect
+           - runs-des3-y5sx-01-us04
+               more running
+               T/Tpsf > 0.5 S/N > 10  m: -2.14151275e-02 +/- 3.26982997e-03
+               T/Tpsf > 0.5 S/N > 15  m: -1.74806068e-02 +/- 3.44116611e-03
+
+       - MOF with less conservative Fof, but the caveat is that parts of the
+         stamp will then have neighbors
+           - runs-des3-y5sx-01-metadetect-02
 
 - metacal assumptions that might be broken
     1 linearity
