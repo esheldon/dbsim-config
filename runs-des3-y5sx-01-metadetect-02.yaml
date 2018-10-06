@@ -1,0 +1,10 @@
+runs: [
+    run-des3-y5sx-01-metadetect-02-01,
+    run-des3-y5sx-01-metadetect-02-02,
+    run-des3-y5sx-01-metadetect-02-03,
+    run-des3-y5sx-01-metadetect-02-04,
+    run-des3-y5sx-01-metadetect-02-05,
+    run-des3-y5sx-01-metadetect-02-06,
+    run-des3-y5sx-01-metadetect-02-07,
+    run-des3-y5sx-01-metadetect-02-08,
+]
