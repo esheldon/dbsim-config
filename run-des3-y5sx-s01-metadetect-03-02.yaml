@@ -1,0 +1,10 @@
+sim: dbsim-des3-y5sx-s01
+
+fit: metadetect-03
+
+# get about 12 per
+ntrials: 4_000_000
+
+sec_per: 8.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
