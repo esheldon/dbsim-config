@@ -369,6 +369,14 @@ run-des3ce-10-mcal-07-01
            s2n10Trat0.5
             errors are 1 sigma
             m: 5.11061955e-03 +/- 9.86517315e-03  c: -3.06095835e-05 +/- 1.95841368e-04
+       - more running
+
+   - dbsim-des3-y5sx-s01
+       - simpler sim where can shear whole field
+       - s/n dist doesn't really look right
+
+       - run-des3-y5sx-s01-metadetect-03-*
+       - running at slac
 
 - metacal assumptions that might be broken
     1 linearity
