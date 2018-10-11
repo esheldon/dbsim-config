@@ -1,5 +1,11 @@
 runs: [
-run-des3-y5sx-s01-metadetect-03-02,
-run-des3-y5sx-s01-metadetect-03-03,
-run-des3-y5sx-s01-metadetect-03-04,
+    run-des3-y5sx-s01-metadetect-03-02,
+    run-des3-y5sx-s01-metadetect-03-03,
+    run-des3-y5sx-s01-metadetect-03-04,
+    run-des3-y5sx-s01-metadetect-03-05,
+    run-des3-y5sx-s01-metadetect-03-06,
+    run-des3-y5sx-s01-metadetect-03-07,
+    run-des3-y5sx-s01-metadetect-03-08,
+    run-des3-y5sx-s01-metadetect-03-09,
+    run-des3-y5sx-s01-metadetect-03-10,
 ]
