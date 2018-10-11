@@ -377,6 +377,15 @@ run-des3ce-10-mcal-07-01
 
        - run-des3-y5sx-s01-metadetect-03-*
        - running at slac
+            1 sigma errors
+            T/Tpsf > 0.5 S/N > 10    m: 1.89073931e-03 +/- 9.28692960e-04
+            T/Tpsf > 0.5 S/N > 15    m: 1.19706247e-03 +/- 1.24810505e-03
+            T/Tpsf > 0.5 S/N > 20    m: 3.49746501e-03 +/- 2.15713511e-03
+
+            1 sigma errors
+            S/N > 10    m: 1.21546336e-03 +/- 8.15170121e-04
+            S/N > 15    m: 6.23485497e-04 +/- 1.06562700e-03
+            S/N > 20    m: 1.89417281e-03 +/- 1.72204723e-03
 
 - metacal assumptions that might be broken
     1 linearity
