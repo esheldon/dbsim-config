@@ -1,5 +1,4 @@
 # meta-detection with bdf MOF, no uberseg
-# old conservative FoF finding
 fitter: 'mof'
 
 meta:

@@ -1,5 +1,6 @@
 # meta-detection with bdf MOF, no uberseg
 # use gauss not coellip3
+# old conservative FoF finder
 fitter: 'mof'
 
 meta:
@@ -9,41 +10,16 @@ meta:
 weight_type: 'weight'
 
 # old conservative FoF finder
-#fofs:
-#    find_fofs: true
-
-#    method: 'stamps'
-
-#    buff_type: 'tot'
-#    buff_frac: 0.25
-#    maxsize_to_replace: 256
-#    new_maxsize: 384
-#    check_seg: True
-
 fofs:
     find_fofs: true
 
-    method: "radius"
+    method: 'stamps'
 
-    # name in meds file, or catalog if method is catalog_radius
-    radius_column: "iso_radius"
-
-    # factor to multiply radius this happens before clipping to [min_radius,
-    # max_radius] for a low threshold, the isoarea is basically covering all
-    # the observed flux, so mult of 1 makes sense
-    radius_mult: 1.0
-
-    # clip the radius in pixels=sqrt(isoarea_image/pi)
-    # 5 pixels is about 3 sigma for a 1'' FWHM gaussian
-    # this happens after the radius_mult is applied
-    min_radius: 4
-    max_radius: null
-
-    # This is added to the radius. This kind of padding makes sense for radii
-    # based on the iso area.  Padding happens after mult and clipping
-    padding: 2
-
-    check_seg: False
+    buff_type: 'tot'
+    buff_frac: 0.25
+    maxsize_to_replace: 256
+    new_maxsize: 384
+    check_seg: True
 
 metacal:
 

@@ -11,4 +11,17 @@ runs: [
     run-des3-y5sx-01-metadetect-04-10,
     run-des3-y5sx-01-metadetect-04-11,
     run-des3-y5sx-01-metadetect-04-12,
+
+    run-des3-y5sx-01-metadetect-04-13,
+    #run-des3-y5sx-01-metadetect-04-14,
+    #run-des3-y5sx-01-metadetect-04-15,
+    #run-des3-y5sx-01-metadetect-04-16,
+    #run-des3-y5sx-01-metadetect-04-17,
+    #run-des3-y5sx-01-metadetect-04-18,
+    #run-des3-y5sx-01-metadetect-04-19,
+    #run-des3-y5sx-01-metadetect-04-20,
+    #run-des3-y5sx-01-metadetect-04-21,
+    #run-des3-y5sx-01-metadetect-04-22,
+    #run-des3-y5sx-01-metadetect-04-23,
+    #run-des3-y5sx-01-metadetect-04-24,
 ]
