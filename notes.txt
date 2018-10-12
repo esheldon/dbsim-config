@@ -1273,3 +1273,10 @@ trying this config on des3 like sim
                 m: 1.70214310e-03 +/- 7.83258945e-03  c: -7.31005518e-05 +/- 1.81595282e-04
 
         - running on des3-012 it completely blows up
+
+- exp pair tests with meta-detect.  Should also do without meta-detect for
+  comparision
+    - uberseg
+        - run-epair-sall-*as-y5sxSN20-metadetect-03-01
+    - BDF MOF, no uberseg
+        - run-epair-sall-*as-y5sxSN20-metadetect-05-01
