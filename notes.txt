@@ -1278,5 +1278,8 @@ trying this config on des3 like sim
   comparision
     - uberseg
         - run-epair-sall-*as-y5sxSN20-metadetect-03-01
+        - goes nuts for small separations, presumably due to uberseg issues.
+        There is also additive bias
     - BDF MOF, no uberseg
         - run-epair-sall-*as-y5sxSN20-metadetect-05-01
+        - looks ok, but seems to have overall ~0.002 bias m, small c
