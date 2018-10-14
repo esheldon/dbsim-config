@@ -1,0 +1,10 @@
+sim: dbsim-epair-sall-4.0as-y5sxSN20
+
+fit: mcal-mofbdf01
+
+# 2 per
+ntrials: 10_000_000
+
+sec_per: 0.8
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

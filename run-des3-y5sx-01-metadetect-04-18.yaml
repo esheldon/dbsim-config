@@ -2,9 +2,9 @@ sim: dbsim-des3-y5sx-01
 
 fit: metadetect-04
 
-ntrials: 2_000_000
+ntrials: 1_000_000
 
 # over-estimate
 sec_per: 35.0
-desired_hours: 1.0
+desired_hours: 0.25
 jobs_per_condor_sub: 1000

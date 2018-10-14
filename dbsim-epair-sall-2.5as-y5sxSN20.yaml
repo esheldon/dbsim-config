@@ -1,0 +1,82 @@
+sim_type: pair
+
+dims: [64, 64]
+
+# central with neighbor on an annulus
+positions:
+    type: ring
+    radius_arcsec: 2.5
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+# noise for the image, same for all bands
+noise_sigma: 0.3
+
+background:
+    measure: false
+
+# source extractor config
+# y5 settings for deblend_cont and nthresh but higher thresh and min area of 9
+# to avoid spurious objects
+#
+# but is it really avoiding spurious objects or just forcing 1 object? After
+# all we do have two peaks here
+sx:
+    # in sky sigma
+    #DETECT_THRESH
+    detect_thresh: 0.8
+
+    # Minimum contrast parameter for deblending
+    #DEBLEND_MINCONT
+    deblend_cont: 0.00001
+
+    deblend_nthresh: 64
+
+    minarea: 4
+
+    filter_type: 'conv'
+
+    # 7x7 convolution mask of a gaussian PSF with FWHM = 3.0 pixels.
+    filter_kernel:  [
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.068707, 0.296069, 0.710525, 0.951108, 0.710525, 0.296069, 0.068707],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+    ]
+
+meds:
+    min_box_size: 32
+    max_box_size: 32
+
+    #box_type: sigma_size
+    #sigma_fac: 5.0
+
+    box_type: iso_radius
+    rad_min: 4
+    rad_fac: 2
+    box_padding: 2
+
+draw_method: fft
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 1
+
+psf:
+    model: gauss
+    fwhm: 0.9
+    noise_sigma: 0.0001
+
+pdfs:
+    g:
+        sigma: 0.02
+
+    hlr: 0.5
+    flux: 75.0
+
+shear: [0.02, 0.00]
+shear_all: True

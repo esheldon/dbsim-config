@@ -1,5 +1,4 @@
 # meta-detection with bdf MOF, no uberseg
-# old conservative FoF finding
 # use gauss not coellip3
 fitter: 'mof'
 
