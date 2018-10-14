@@ -389,7 +389,11 @@ run-des3ce-10-mcal-07-01
 
    - dbsim-des3-y5sx-sip01
        - same as dbsim-des3-y5sx-s01 but objects sheared in place
+            S/N > 10    m: -1.35042579e-04 +/- 7.73249754e-04  c: -2.78447452e-06 +/- 1.54198763e-05
+            S/N > 15    m: -7.11528084e-04 +/- 1.01019473e-03  c: 3.12249959e-06 +/- 2.01759432e-05
+            S/N > 20    m: -1.63728697e-03 +/- 1.63420032e-03  c: 5.03379325e-06 +/- 3.26243344e-05
 
+ 
 - metacal assumptions that might be broken
     1 linearity
     2 noise known
