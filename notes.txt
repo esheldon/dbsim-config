@@ -1292,4 +1292,7 @@ trying this config on des3 like sim
     - BDF MOF, no uberseg, 
         - run-epair-sip-*as-y5sxSN20-metadetect-05-01
 
-- Also todo is to run without meta-detect, just MOF subtracted in stamps
+- these tests and others with epair are summarized by the plot.  uberseg goes
+  crazy, but the other look quite consistent at the 0.001 level
+
+- now doing bdk pairs with range of flux and size
