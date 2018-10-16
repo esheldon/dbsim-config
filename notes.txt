@@ -1301,9 +1301,12 @@ trying this config on des3 like sim
     - maybe just a centroid thing?  Ran with loose center prior and got the
       same.  Although this might be related to where the center of the stamp
       is located?
+      - mcal-mofbdf02
+      - looks just as bad
 
     - I noticed that there were lots more of 3 instead of 2 identifications
       for the non metadetect run.  Due to larger psf?  I uas using psf: gauss
       which makes a huge psf.
     - metadetect-05a assuming round psf.  I do see a lot more 3 object
       identifications, so maybe bias will return
+      - nope, looks fine
