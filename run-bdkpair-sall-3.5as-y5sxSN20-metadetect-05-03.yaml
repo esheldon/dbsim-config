@@ -1,0 +1,9 @@
+sim: dbsim-bdkpair-sall-3.5as-y5sxSN20
+fit: metadetect-05
+
+# 2 per
+ntrials: 40_000_000
+
+sec_per: 0.8
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
