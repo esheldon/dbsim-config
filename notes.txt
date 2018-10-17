@@ -1310,3 +1310,19 @@ trying this config on des3 like sim
     - metadetect-05a assuming round psf.  I do see a lot more 3 object
       identifications, so maybe bias will return
       - nope, looks fine
+
+    - So it looks like meta-detect helps deblending even when the detection is
+      fairly secure, in the sense that at least 2 objects are found. What
+      aspects of this are affected?
+        - the location of the objects to begin with
+        - the initial flux and sizes estimates
+        - how big the boxes are in principle, although here they are fixed to
+          32
+        - the MOF itself will depend on the shear, although I did test a pure
+          "metamof" at some point.  In that one, the catalog was based on the
+          original image but MOF was re-run on the sheared versions
+        - groupings of MOF will change when we re-detect on the sheared image,
+        but that doesn't really apply to this test
+
+- can we come up with a masking scheme that doesn't go bonkers for
+close objects?  Tried a few above (circular mask, the pure seg map)
