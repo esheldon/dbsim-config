@@ -1,0 +1,9 @@
+sim: dbsim-bdkpair-sip-2.5as-y5sxSN20
+fit: mcal-mofbdf01
+
+# 2 per
+ntrials: 20_000_000
+
+sec_per: 0.7
+desired_hours: 0.5
+jobs_per_condor_sub: 1000
