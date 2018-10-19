@@ -1,4 +1,4 @@
-sim: dbsim-bdkpair-sall-1.75as-y5sxSN20
+sim: dbsim-bdkpair-sall-1.5as-y5sxSN20
 fit: mcal-mofbdf01
 
 ntrials: 5_000_000
