@@ -1,0 +1,122 @@
+# bulge+disk with differing parameters, as well as a
+# range of fluxes and sizes
+sim_type: pair
+
+dims: [80,80]
+
+# central with neighbor on an annulus
+positions:
+    type: ring
+    radius_arcsec: 1.25
+
+# simple pixel scale for wcs
+pixel_scale: 0.263
+
+# noise for the image, same for all bands
+noise_sigma: 0.3
+
+background:
+    measure: false
+
+# source extractor config
+# y5 settings for deblend_cont and nthresh but higher thresh and min area of 9
+# to avoid spurious objects
+#
+# but is it really avoiding spurious objects or just forcing 1 object? After
+# all we do have two peaks here
+sx:
+    # in sky sigma
+    #DETECT_THRESH
+    detect_thresh: 0.8
+
+    # Minimum contrast parameter for deblending
+    #DEBLEND_MINCONT
+    deblend_cont: 0.00001
+
+    deblend_nthresh: 64
+
+    minarea: 4
+
+    filter_type: 'conv'
+
+    # 7x7 convolution mask of a gaussian PSF with FWHM = 3.0 pixels.
+    filter_kernel:  [
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.068707, 0.296069, 0.710525, 0.951108, 0.710525, 0.296069, 0.068707],
+        [0.051328, 0.221178, 0.530797, 0.710525, 0.530797, 0.221178, 0.051328],
+        [0.021388, 0.092163, 0.221178, 0.296069, 0.221178, 0.092163, 0.021388],
+        [0.004963, 0.021388, 0.051328, 0.068707, 0.051328, 0.021388, 0.004963],
+    ]
+
+meds:
+    min_box_size: 32
+    max_box_size: 32
+
+    #box_type: sigma_size
+    #sigma_fac: 5.0
+
+    box_type: iso_radius
+    rad_min: 4
+    rad_fac: 2
+    box_padding: 2
+
+draw_method: fft
+
+# number of bands. you should probably keep this
+# at 3 for visualization purposes
+nband: 1
+
+psf:
+    model: gauss
+    fwhm: 0.9
+    noise_sigma: 0.0001
+
+pdfs:
+    g:
+        sigma: 0.20
+
+    # compare to fixed 0.5 for dbsim-epair-sall-2.5as-y5sxSN20
+    hlr:
+        type: uniform
+        range: [0.4, 0.6]
+
+    # compare to fixed 75 for dbsim-epair-sall-2.5as-y5sxSN20
+    flux:
+        type: uniform
+        range: [50.0,100.0]
+
+    bulge:
+
+        # g_bulge=g_fac*g_disk
+        g_fac:
+            type: uniform
+            range: [0.0, 0.5]
+
+        fracdev:
+            type: uniform
+            range: [0.0, 1.0]
+
+        # bulge_hlr=hlr_fac*disk_hlr
+        hlr_fac: 
+            type: uniform
+            range: [0.4, 0.6]
+
+        # shift in units of the disk hlr
+        bulge_shift: 0.05
+
+    knots:
+
+        num:
+            type: uniform
+            range: [1, 50]
+
+
+        # flux per knot as a fraction of the disk flux
+        # so the max of 50 knots would have a total of 1/5 the disk flux
+        flux_frac_per_knot: 0.004
+
+
+shear: [0.02, 0.00]
+shear_all: True
