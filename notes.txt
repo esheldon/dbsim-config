@@ -1,23 +1,68 @@
 what I know currently
 ----------------------
 
-- the bias occurs when there are  undetected blends
-- works ok when all objects are above detection threshold
+Most of the bias is detection related.
 
-- bias is minus few percent in all cases where there were objects below
-  threshold
-    - R are too high
+some summary of results
+-----------------------
 
-- caveat:  I also saw it for low noise.
+bdkpair sims
+============
 
-- see bias with our without uberseg (consistent with above, that it is about
-  undetected objects not deblending per se.)
-  - I thought it was maybe a selection effect but I doubt this, because it
-    occurs even when far above thresholds
+runs on the bdkpair sims, at a variety of separations, have been illuminating
 
-- didn't see this in the Y1 simulations "nbrsim"
+e.g. when not doing metadetect but yes doing deblending
 
-- see it even if matching to truth (which I did in nbrsim)
+    runs-bdkpair-sall-*as-y5sxSN20-mcal-mofbdf01
+
+there is a huge
+bias at ~1.5 arcsec seprations where 1 object is found 60% of the time.
+This mostly goes away with metadetection
+
+    runs-bdkpair-sall-*as-y5sxSN20-metadetect-05
+
+Also we don't even need to do deblending, this one is with moments
+from a fixed weight
+
+    runs-bdkpair-sall-*as-y5sxSN20-metadetect-mom01
+
+descwl sims
+===============
+
+with metadetect things look pretty good
+
+more inclusive FoF finding
+
+    runs-des3-y5sx-01-metadetect-03
+
+less inclusive FoF finding
+
+    runs-des3-y5sx-01-metadetect-02
+
+Both look fine; that's because deblending isn't even necessary!  See below
+(will do not deblended descwl sims soon)
+
+
+uberseg only with big bias (note uberseg itself isn't causing this)
+
+    runs-des3-y5sx-01-us04
+
+
+my simple bd sims with cosmos size/mag
+=======================================
+forgot to turn on knots
+
+    runs-des3-y5sx-s01-metadetect-03
+
+also sheared in place
+
+    runs-des3-y5sx-sip01-metadetect-03
+
+
+and using moments only
+
+    runs-des3-y5sx-s01-metadetect-mom01
+
 
 ideas
 ------
@@ -367,9 +412,27 @@ run-des3ce-10-mcal-07-01
            - runs-des3-y5sx-01-metadetect-02
            - run 1/8 near finished
            s2n10Trat0.5
-            errors are 1 sigma
-            m: 5.11061955e-03 +/- 9.86517315e-03  c: -3.06095835e-05 +/- 1.95841368e-04
-       - more running
+
+            R:
+             [0.96179052 0.95497192]
+             shear: 0.019938 +/- 0.000068 0.000052 +/- 0.000068
+             errors are 1 sigma
+             m: -3.10982981e-03 +/- 3.40828112e-03  c: 5.19255115e-05 +/- 6.82138730e-05
+
+           s2n15Trat0.5
+            R:
+             [1.14845842 1.14006784]
+             shear: 0.019935 +/- 0.000073 0.000049 +/- 0.000073
+             errors are 1 sigma
+             m: -3.23864582e-03 +/- 3.64886034e-03  c: 4.86785124e-05 +/- 7.33373058e-05
+
+           s2n20Trat0.5
+
+            R:
+             [1.25863761 1.25131849]
+             shear: 0.019968 +/- 0.000080 0.000026 +/- 0.000080
+             errors are 1 sigma
+             m: -1.59361086e-03 +/- 3.97758095e-03  c: 2.59916755e-05 +/- 7.99280795e-05
 
    - dbsim-des3-y5sx-s01
        - simpler sim where can shear whole field
@@ -386,6 +449,14 @@ run-des3ce-10-mcal-07-01
             S/N > 10    m: 1.21546336e-03 +/- 8.15170121e-04
             S/N > 15    m: 6.23485497e-04 +/- 1.06562700e-03
             S/N > 20    m: 1.89417281e-03 +/- 1.72204723e-03
+
+
+       - runs-des3-y5sx-s01-metadetect-mom01
+       - moments only
+           s2n10
+           1 sigma
+           m: 9.91495753e-04 +/- 1.29852554e-03  c: 3.37804400e-05 +/- 2.58278767e-05
+
 
    - dbsim-des3-y5sx-sip01
        - same as dbsim-des3-y5sx-s01 but objects sheared in place
