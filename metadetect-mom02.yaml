@@ -1,0 +1,41 @@
+# this one we symmetrize the psf. Intended for the
+# more complex descwl psf
+
+fitter: 'mom'
+
+meta:
+    dometa: true
+    type: 'meta-detect'
+
+weight_type: 'weight'
+
+# old conservative FoF finder
+fofs:
+    find_fofs: false
+
+weight:
+    fwhm: 1.2
+
+metacal:
+
+    # 2**30
+    # this cuts images for which the cutout intersects
+    # the edge, no good for metacal
+    bmask_flags: 1073741824
+
+    metacal_pars:
+        symmetrize_psf: True
+        types: ['noshear','1p','1m','2p','2m']
+
+
+    # needed for PSF symmetrization
+    psf:
+        model: 'gauss'
+
+        ntry: 2
+
+        lm_pars:
+            maxfev: 2000
+            ftol: 1.0e-5
+            xtol: 1.0e-5
+
