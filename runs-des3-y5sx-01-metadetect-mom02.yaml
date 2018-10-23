@@ -1,0 +1,5 @@
+runs: [
+    run-des3-y5sx-01-metadetect-mom02-01,
+    run-des3-y5sx-01-metadetect-mom02-02,
+    run-des3-y5sx-01-metadetect-mom02-03,
+]
