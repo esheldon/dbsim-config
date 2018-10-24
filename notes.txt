@@ -434,6 +434,17 @@ run-des3ce-10-mcal-07-01
              errors are 1 sigma
              m: -1.59361086e-03 +/- 3.97758095e-03  c: 2.59916755e-05 +/- 7.99280795e-05
 
+        - moments only
+        runs-des3-y5sx-01-metadetect-mom02
+           - s2n10Trat1.2 m: -3.48866630e-03 +/- 2.08919052e-03  c: -2.54666193e-05 +/- 4.16011390e-05
+           - s2n15Trat1.2 m: -1.05658196e-03 +/- 2.30800839e-03  c: -1.51713668e-05 +/- 4.60075901e-05
+           - s2n15Trat1.2 m: -2.33260437e-03 +/- 2.56382900e-03  c: 6.74326231e-06 +/- 5.11579732e-05
+
+           - the variance is no larger than for the uberseg run. Both are 7%
+             larger than deblended run.
+
+           more running
+
    - dbsim-des3-y5sx-s01
        - simpler sim where can shear whole field
        - s/n dist doesn't really look right
