@@ -440,14 +440,16 @@ run-des3ce-10-mcal-07-01
            - s2n15Trat1.2 m: -1.05658196e-03 +/- 2.30800839e-03  c: -1.51713668e-05 +/- 4.60075901e-05
            - s2n15Trat1.2 m: -2.33260437e-03 +/- 2.56382900e-03  c: 6.74326231e-06 +/- 5.11579732e-05
 
-           - the variance is larger than the uberseg or MOF by ~7-9% but the
-             cuts are not quite the same.  I don't think there was any
-             increase for the pair test was there?
-
-
-             larger than deblended run.
-
            more running
+
+           - the variance is larger than the uberseg or MOF by ~7-9% but the
+             cuts are not quite the same.  e.g. the percentage that passes the
+             s/n cuts is higher for the MOF one because those models get more
+             of the light than the stupid moments.
+             
+             I don't think there was any increase for the pair test was there?
+
+
 
    - dbsim-des3-y5sx-s01
        - simpler sim where can shear whole field
