@@ -466,6 +466,7 @@ run-des3ce-10-mcal-07-01
    - dbsim-des3-y5sx-s01
        - simpler sim where can shear whole field
        - s/n dist doesn't really look right
+       - eff. density for "normal" cuts is more like 9 actually
 
        - run-des3-y5sx-s01-metadetect-03-*
        - running at slac
@@ -493,7 +494,10 @@ run-des3ce-10-mcal-07-01
             S/N > 15    m: -7.11528084e-04 +/- 1.01019473e-03  c: 3.12249959e-06 +/- 2.01759432e-05
             S/N > 20    m: -1.63728697e-03 +/- 1.63420032e-03  c: 5.03379325e-06 +/- 3.26243344e-05
 
- 
+    - dbsim-des3double-y5sx-s01
+       - doubled the density, eff. density is 20 for normal cuts s2n10Trat1.2
+
+
 - metacal assumptions that might be broken
     1 linearity
     2 noise known
