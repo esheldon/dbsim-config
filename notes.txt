@@ -63,6 +63,15 @@ and using moments only
 
     runs-des3-y5sx-s01-metadetect-mom01
 
+need a run on this sim using uberseg or MOF+metacal. For monday
+won't have MOF probably but could set uberseg going
+
+
+doubled density
+    dbsim-des3double-y5sx-s01
+    runs-des3double-y5sx-s01-metadetect-mom01
+
+
 
 ideas
 ------
@@ -406,6 +415,7 @@ run-des3ce-10-mcal-07-01
                1 sigma
                T/Tpsf > 0.5 S/N > 10  m: -2.14151275e-02 +/- 3.26982997e-03
                T/Tpsf > 0.5 S/N > 15  m: -1.74806068e-02 +/- 3.44116611e-03
+               T/Tpsf > 0.5 S/N > 20  m: -1.33585967e-02 +/- 3.73861292e-03
 
        - MOF with less conservative Fof, but the caveat is that parts of the
          stamp will then have neighbors
