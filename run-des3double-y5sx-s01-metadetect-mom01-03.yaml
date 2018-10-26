@@ -1,0 +1,8 @@
+sim: dbsim-des3double-y5sx-s01
+fit: metadetect-mom01
+
+ntrials: 5_000_000
+
+sec_per: 6.3
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

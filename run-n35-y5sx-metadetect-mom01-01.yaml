@@ -1,0 +1,8 @@
+sim: dbsim-n35-y5sx
+fit: metadetect-mom01
+
+ntrials: 5_000_000
+
+sec_per: 4.5
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
