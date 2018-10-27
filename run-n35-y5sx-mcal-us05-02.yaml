@@ -1,0 +1,8 @@
+sim: dbsim-n35-y5sx
+fit: mcal-us05
+
+ntrials: 1_400_000
+
+sec_per: 25
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

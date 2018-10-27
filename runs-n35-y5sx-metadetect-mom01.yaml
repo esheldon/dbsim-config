@@ -1,0 +1,5 @@
+runs: [
+    run-n35-y5sx-metadetect-mom01-01,
+    run-n35-y5sx-metadetect-mom01-02,
+    run-n35-y5sx-metadetect-mom01-03,
+]
