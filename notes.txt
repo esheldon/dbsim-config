@@ -497,6 +497,8 @@ run-des3ce-10-mcal-07-01
            1 sigma
            m: 9.91495753e-04 +/- 1.29852554e-03  c: 3.37804400e-05 +/- 2.58278767e-05
 
+       - XXX running mof+metacal
+       - run-des3-y5sx-s01-mcal-mofbdf03-01
 
    - dbsim-des3-y5sx-sip01
        - same as dbsim-des3-y5sx-s01 but objects sheared in place
@@ -506,6 +508,29 @@ run-des3ce-10-mcal-07-01
 
     - dbsim-des3double-y5sx-s01
        - doubled the density, eff. density is 20 for normal cuts s2n10Trat1.2
+
+
+    - dbsim-n35-y5sx
+        - neff=35
+        - uberseg+metacal
+            1 sigma
+            s2n10Trat0.5  m: -6.03927927e-02 +/- 2.29909335e-03  c: 3.77613121e-05 +/- 4.59320776e-05
+            s2n15Trat0.5  m: -5.45858419e-02 +/- 2.38001746e-03  c: 1.64801191e-05 +/- 4.75945335e-05
+            s2n20Trat0.5  m: -4.94374001e-02 +/- 2.50057026e-03  c: 1.33174650e-05 +/- 5.00300827e-05
+
+        - MOF+metacal
+            - run-n35-y5sx-mcal-mofbdf03-01
+            1 sigma
+            s2n10Trat0.5  m: -1.30984176e-01 +/- 5.33468871e-03  c: 6.65210688e-05 +/- 1.14405226e-04
+            s2n15Trat0.5  m: -1.24381877e-01 +/- 5.34357868e-03  c: -3.46943145e-05 +/- 1.13845861e-04
+            s2n20Trat0.5  m: -1.14889849e-01 +/- 5.43925294e-03  c: 4.46966743e-05 +/- 1.16710174e-04
+
+        - metadetect moments
+            - runs-n35-y5sx-metadetect-mom01
+            1 sigma
+            s2n10Trat1.2 m: 9.66284102e-05 +/- 1.38315015e-03  c: 3.60595972e-05 +/- 2.75579672e-05
+            s2n15Trat1.2 m: -2.16341085e-04 +/- 1.72042906e-03  c: 2.51349444e-05 +/- 3.43070182e-05
+            s2n20Trat1.2 m: -3.72554292e-03 +/- 2.52342906e-03  c: 6.16297794e-05 +/- 5.06335048e-05
 
 
 - metacal assumptions that might be broken
