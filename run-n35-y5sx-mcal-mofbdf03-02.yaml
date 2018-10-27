@@ -1,0 +1,10 @@
+sim: dbsim-n35-y5sx
+fit: mcal-mofbdf03
+
+ntrials: 200_000
+
+# mean is probably more like 60
+# try to catch most outliers
+sec_per: 120
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

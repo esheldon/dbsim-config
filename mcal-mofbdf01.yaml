@@ -21,7 +21,6 @@ metacal:
     bmask_flags: 1073741824
 
     metacal_pars:
-        # assuming psf is round
         psf: 'gauss'
         types: ['noshear','1p','1m','2p','2m']
 
