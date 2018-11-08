@@ -1,0 +1,8 @@
+sim: dbsim-bdkpair-sip-1.5as-y5sx48
+fit: redetect-mom01
+
+ntrials: 300_000
+
+sec_per: 0.3
+desired_hours: 0.05
+jobs_per_condor_sub: 1000

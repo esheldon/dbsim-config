@@ -1,0 +1,9 @@
+# full density
+sim: dbsim-lsstgauss-sall-y5sx-02
+fit: mcal-momcc01
+
+ntrials: 800_000
+
+sec_per: 40.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

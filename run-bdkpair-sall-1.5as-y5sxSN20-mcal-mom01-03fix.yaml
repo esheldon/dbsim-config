@@ -1,0 +1,9 @@
+# after fix of n gmix
+sim: dbsim-bdkpair-sall-1.5as-y5sxSN20
+fit: mcal-mom01
+
+ntrials: 10_000_000
+
+sec_per: 0.3
+desired_hours: 0.25
+jobs_per_condor_sub: 1000
