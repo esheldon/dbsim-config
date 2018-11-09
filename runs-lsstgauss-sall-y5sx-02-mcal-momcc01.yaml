@@ -1,0 +1,4 @@
+runs: [
+    run-lsstgauss-sall-y5sx-02-mcal-momcc01-01,
+    run-lsstgauss-sall-y5sx-02-mcal-momcc01-02,
+]
