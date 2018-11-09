@@ -1,0 +1,8 @@
+sim: dbsim-des3-y5sx-s01
+fit: mcal-momcc01
+
+ntrials: 4_000_000
+
+sec_per: 10.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000
