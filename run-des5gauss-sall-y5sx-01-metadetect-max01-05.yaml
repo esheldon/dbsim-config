@@ -1,0 +1,8 @@
+sim: dbsim-des5gauss-sall-y5sx-01
+fit: metadetect-max01
+
+ntrials: 1_000_000
+
+sec_per: 25.0
+desired_hours: 1.0
+jobs_per_condor_sub: 1000

@@ -1,0 +1,10 @@
+runs: [
+    run-des5gauss-sall-y5sx-01-metadetect-max01-01,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-02,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-03,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-04,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-05,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-06,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-07,
+    run-des5gauss-sall-y5sx-01-metadetect-max01-08,
+]
