@@ -563,10 +563,19 @@ run-des3ce-10-mcal-07-01
         s2n20Trat1.5   m: 1.34106754e-04 +/- 1.41021605e-03  c: -2.42317990e-05 +/- 2.79741919e-05
         s2n25Trat1.5   m: 3.87318102e-05 +/- 1.45127088e-03  c: -1.64774878e-05 +/- 2.88419952e-05
 
-    - run-des5gauss-sall-y5sx-01-metadetect-max01-01
+    - runs-des5gauss-sall-y5sx-01-metadetect-max01
+        - gauss psf
         - des5 descwl settings, with no density cut, even though it gives way
         too high density.
         - doing metadetect with exp max fitter
+        - looks good
+        - 1 sigma
+        s/n > 10  m: 1.06944960e-03 +/- 1.23445603e-03  c: 5.33953572e-05 +/- 2.49963728e-05
+        s/n > 15  m: 1.40535657e-03 +/- 1.28742195e-03  c: 4.99256866e-05 +/- 2.58885032e-05
+        s/n > 20  m: 2.08377897e-03 +/- 1.35914189e-03  c: 3.04695029e-05 +/- 2.70805270e-05
+
+    - runs-des5-sall-y5sx-01-metadetect-max01
+        - not gauss psf
 
 - metacal assumptions that might be broken
     1 linearity
