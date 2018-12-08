@@ -1,0 +1,9 @@
+runs: [
+    run-des5-sall-y5sx-01-metadetect-max01-t01,
+    run-des5-sall-y5sx-01-metadetect-max01-t02,
+
+    run-des5-sall-y5sx-01-metadetect-max01-t03,
+    run-des5-sall-y5sx-01-metadetect-max01-t04,
+    run-des5-sall-y5sx-01-metadetect-max01-t05,
+    run-des5-sall-y5sx-01-metadetect-max01-t06,
+]
