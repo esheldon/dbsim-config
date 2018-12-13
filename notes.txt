@@ -576,6 +576,22 @@ run-des3ce-10-mcal-07-01
 
     - runs-des5-sall-y5sx-01-metadetect-max01
         - not gauss psf
+        - using original fitgauss psf
+        10 m: 5.06382543e-03 +/- 1.77387407e-03  c: -2.88256137e-06 +/- 3.59979108e-05
+        15 m: 3.71593414e-03 +/- 1.79796642e-03  c: -2.47140570e-05 +/- 3.61348629e-05
+        20 m: 4.73837117e-03 +/- 1.85133431e-03  c: -2.17247632e-05 +/- 3.67976658e-05
+
+        - using dilated fitgauss psf (might still want more dilation)
+        1 sigma
+        10 m: 2.81557975e-03 +/- 1.25540554e-03  c: -4.18055586e-06 +/- 2.55406596e-05
+        15 m: 2.57073911e-03 +/- 1.27161588e-03  c: -1.47795479e-05 +/- 2.56304791e-05
+        20 m: 2.51310954e-03 +/- 1.31000666e-03  c: 6.45523614e-06 +/- 2.60765490e-05
+
+        - using more dilated fitgauss psf (might still want more dilation)
+        1 sigma
+        m: -1.03966303e-03 +/- 1.25347742e-03  c: 1.19464295e-05 +/- 2.55377434e-05
+        m: 2.81937949e-05 +/- 1.27091892e-03  c: 2.10313463e-05 +/- 2.56394048e-05
+        m: 2.19226859e-04 +/- 1.30955803e-03  c: 1.77445883e-05 +/- 2.60724175e-05
 
 - metacal assumptions that might be broken
     1 linearity
