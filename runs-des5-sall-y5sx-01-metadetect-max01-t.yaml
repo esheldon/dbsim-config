@@ -1,9 +1,20 @@
 runs: [
     run-des5-sall-y5sx-01-metadetect-max01-t01,
     run-des5-sall-y5sx-01-metadetect-max01-t02,
-
     run-des5-sall-y5sx-01-metadetect-max01-t03,
     run-des5-sall-y5sx-01-metadetect-max01-t04,
     run-des5-sall-y5sx-01-metadetect-max01-t05,
     run-des5-sall-y5sx-01-metadetect-max01-t06,
+    run-des5-sall-y5sx-01-metadetect-max01-t07,
+    run-des5-sall-y5sx-01-metadetect-max01-t08,
+
+    run-des5-sall-y5sx-01-metadetect-max01-t09,
+    run-des5-sall-y5sx-01-metadetect-max01-t10,
+    run-des5-sall-y5sx-01-metadetect-max01-t11,
+    run-des5-sall-y5sx-01-metadetect-max01-t12,
+    run-des5-sall-y5sx-01-metadetect-max01-t13,
+    run-des5-sall-y5sx-01-metadetect-max01-t14,
+    run-des5-sall-y5sx-01-metadetect-max01-t15,
+    run-des5-sall-y5sx-01-metadetect-max01-t16,
+
 ]
